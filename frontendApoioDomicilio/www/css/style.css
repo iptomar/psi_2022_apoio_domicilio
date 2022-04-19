@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    width: 100%;
+    background-color: rgb(113, 39, 250);
+    height: 70px;
+}
+
+#header h1{
+    color: #E1E1E1;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#header h2{
+    color: #e5ed76;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#formulario {
+    padding-top: 10px;
+    height: 1.5em;
+    padding-left: 10px;  
+    text-align: center; 
+}
+
+#formulario label {
+    font-size: 1.2em;
+    
+}
+
+#formulario button {
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
+}
+
+#formLogin {
+    padding-top: 40px;
+    text-align: center;
+}
+
+#formLogin label {
+    font-size: 1.2em;
+    
+}
+
+#formLogin button {
+    font-size: 1.5em;
+    width: 200px;
+    text-align: center;
+}
+
+#index button {
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
+}
+
+#usersTable {
+    font-size: 1.2em;
+    
+}
+
+#addButton {
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
+
+}

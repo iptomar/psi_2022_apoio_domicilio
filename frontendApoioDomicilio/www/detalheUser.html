@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Adicionar Utilizador</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Apoio ao Domicilio</h1>
+        </div>
+        <div id="header">
+            <h2>Adicionar Utilizador</h2>
+        </div>
+        <form id="formulario">
+            <label>Nome: </label>
+            <output type="text" name="" id="nome"><br>
+            <br>          
+            <label>Nome de Utilizador: </label>
+            <output type="text" name="" id="username"><br>
+            <br>
+            <label>Password: </label>
+            <output type="text" name="" id="password"><br>
+            <br>
+            <label for="tipoUtilizador">Tipo de utilizador: </label>
+            <output type="number" name="" id="tipoUtilizador"><br>
+            <br>
+            <label>Data de Nascimento: </label>
+            <output type="date" name="" id="dataNascimento"><br>
+            <br>
+            <label>Foto: </label>
+            <output type="text" name="" id="foto"><br>
+            <br>
+            <label>Telemóvel: </label>
+            <input type="text" name="" id="telemovel"><br>
+            <br>
+            <label>Email: </label>
+            <output type="text" name="" id="email"><br>
+            <br>
+            <button type="submit" onclick="window.location.href='listaUsers.html'">
+               Atualizar utilizador
+            </button>
+            <button type="button" onclick="window.location.href='listaUsers.html'">
+                Voltar
+            </button>
+
+        </form>
+        <script src="js/jquery.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/CriaUser.js"></script>
+    </body>
+</html>
