@@ -14,27 +14,30 @@
         <div id="header">
             <h2> Lista de Utentes </h2>
         </div>
-
-
-
-        <form id="index">
-            
-            <button type="button" onclick="window.location.href='CriaUtente.html'">
+        <body>
+            <table id='utentesTable' border="1">
+                <thead>          
+                        <tr>
+                            <th>Nome</th>
+                            <th>Date de nascimento</th>
+                            <th>Situação</th>
+                            <th>Código Postal</th>
+                            <th>Contacto</th>
+                            <th>Contacto Emergência</th>
+                        </tr> 
+                </thead>
+                <tbody>                                           
+                </tbody>        
+            </table> 
+            <button id="addButton" type="button" onclick="window.location.href='CriaUtente.html'">
                 Adicionar utente
-             </button>
-            <button type="button">
-               Mostrar utente
-            </button>
-            <button type="edit">
-                Editar utente
-             </button>
-             <button type="delete">
-                Remover utente
-             </button>
-
-        </form>
+            </button> 
+            <button type="button" onclick="window.location.href='login.html'">
+                Voltar
+            </button>                            
+    </body>           
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
-        <script src="js/listarUtentes.js"></script>
+        <script src="js/listaUtentes.js"></script>
     </body>
 </html>

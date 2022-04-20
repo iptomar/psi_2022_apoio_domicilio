@@ -21,7 +21,7 @@ const addUser = async (req, res) => {
         password: req.body.password,
         tipoUtilizador: req.body.tipoUtilizador,
         dataNascimento: req.body.dataNascimento,
-        image: req.file.path,
+        foto: req.file.path,
         telemovel: req.body.telemovel,
         email: req.body.email
     }

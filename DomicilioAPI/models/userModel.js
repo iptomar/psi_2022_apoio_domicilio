@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         dataNascimento: {
             type: DataTypes.DATE
         },
-        image: {
+        foto: {
             type: DataTypes.STRING
         },
         telemovel: {

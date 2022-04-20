@@ -15,49 +15,31 @@
             <h2> Lista de Utilizadores </h2>
         </div>
         <body>
-                <table id='usersTable' border="1">
-                    <thead>          
-                            <tr>
-                                <th>Nome</th>
-                                <th>Nome de utilizador</th>
-                                <th>Data de nascimento</th>
-                                <th>Tipo de utilizador</th>
-                                <th>Telemóvel</th>
-                                <th>Detalhe</th>
-                                <th>Editar</th>
-                                <th>Remover</th>
-                            </tr> 
-                    </thead>
-                    <tbody>                 
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>                      
-                                <td><a href="/users/oneUser">Detalhe</a></td>
-                                <td><a href="/users/updateUser">Editar</a></td>
-                                <td><a href="/users/deleteUser">Remover</a></td>
-                            </tr>
-                    </tbody>        
-                </table> 
-                <button id="addButton" type="button" onclick="window.location.href='CriaUser.html'">
-                    Adicionar utilizador
-                 </button>                 
-           
-        </body>   
-           
-
-     
-
-        
+            <table id='usersTable' border="1">
+                <thead>          
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nome de utilizador</th>
+                            <th>Data de nascimento</th>
+                            <th>Tipo de utilizador</th>
+                            <th>Telemóvel</th>
+                            <th>Detalhe</th>
+                            <th>Editar</th>
+                            <th>Remover</th>
+                        </tr> 
+                </thead>
+                <tbody>                                           
+                </tbody>        
+            </table> 
+            <button id="addButton" type="button" onclick="window.location.href='CriaUser.html'">
+                Adicionar utilizador
+                </button>  
+            <button type="button" onclick="window.location.href='login.html'">
+                Voltar
+            </button>                            
+        </body>           
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
         <script src="js/listaUsers.js"></script>
-
-        </script> 
-
-
-    </body>
-  
+    </body> 
 </html>

@@ -21,7 +21,7 @@ const addUtente = async (req, res) => {
         codigoPostal: req.body.codigoPostal,
         contacto: req.body.contacto,
         contacEmergencia: req.body.contacEmergencia,
-        image: req.file.path,
+        foto: req.file.path,
         notas: req.body.notas,
     }
 
