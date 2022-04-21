@@ -4,23 +4,16 @@ var app = {
     },
 
 onDeviceReady: function(){
-    $("#formulario").submit(function (event){
+    $("form#formulario").submit(function (event){
        event.preventDefault();
+       var formData = new FormData(this);
        $.ajax({
            type: "POST",
            url: "http://localhost:8080/api/users/addUser",
-           data: {
-               
-               nome: $("#nome").val(),
-               username: $("#username").val(),
-               password: $("#password").val(),
-               tipoUtilizador: $("#tipoUtilizador").val(),
-               dataNascimento: $("#dataNascimento").val(),
-               foto: $("#foto").val(),
-               telemovel: $("#telemovel").val(),
-               email: $("#email").val()
-
-           },
+           data: formData,
+           cache: false,
+           processData: false, 
+           contentType: false, 
            sucess: function( data ){
                alert(data);
            }
