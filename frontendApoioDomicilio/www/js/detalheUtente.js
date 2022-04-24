@@ -8,7 +8,7 @@ onDeviceReady: function(){
        event.preventDefault();
        $.ajax({
            type: "GET",
-           url: "http://localhost:8080/api/users/oneUser",
+           url: "http://localhost:8080/api/utentes/:id",
            data: {
                
                nome: $("#nome").val(),

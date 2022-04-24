@@ -5,14 +5,14 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/style.css">
-        <title>Detalhes Utente</title>
+        <title>Editar Utente</title>
     </head>
     <body>
         <div id="header">
             <h1>Apoio ao Domicilio</h1>
         </div>
         <div id="header">
-            <h2>Detalhes Utente</h2>
+            <h2>Editar Utente</h2>
         </div>
         <form id="formulario">
             <label>Nome: </label>
@@ -51,6 +51,9 @@
             <label>Notas: </label>
             <input type="textarea" name="" id="notas"><br>
             <br>
+            <button type="submit" onclick="window.location.href='editarUtente.html'">
+                Atualizar
+            </button>
             <button type="button" onclick="window.location.href='listaUtentes.html'">
                 Voltar
             </button>
@@ -58,6 +61,6 @@
         </form>
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
-        <script src="js/detalheUtente.js"></script>
+        <script src="js/editarUtente.js"></script>
     </body>
 </html>
