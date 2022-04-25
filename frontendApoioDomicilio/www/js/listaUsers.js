@@ -9,7 +9,7 @@
                             <td>${data[i].tipoUtilizador}</td>
                             <td>${data[i].dataNascimento}</td>
                             <td>${data[i].telemovel}</td>
-                            <td><a href="/users/oneUser">Detalhe</a></td>
+                            <td><a href="/detalheUser.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Detalhe</a></td>
                             <td><a href="/users/updateUser">Editar</a></td>
                             <td><a href="/users/deleteUser">Remover</a></td>
                            </tr>`
@@ -18,3 +18,4 @@
           });
        
     })
+
