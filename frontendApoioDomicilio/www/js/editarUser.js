@@ -10,7 +10,7 @@
  
  
  onDeviceReady: function(){
-     $("form#formulario").submit(function (event){
+     $("#editForm").submit(function (event){
         event.preventDefault();
         var formData = new FormData(this);
         $.ajax({

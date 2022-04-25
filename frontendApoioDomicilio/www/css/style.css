@@ -72,3 +72,39 @@
     text-align: center;
 
 }
+
+#detForm {
+    padding-top: 10px;
+    height: 1.5em;
+    padding-left: 10px;  
+    text-align: center; 
+}
+
+#detForm label {
+    font-size: 1.2em;
+    
+}
+
+#detForm button {
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
+}
+
+#editForm {
+    padding-top: 10px;
+    height: 1.5em;
+    padding-left: 10px;  
+    text-align: center; 
+}
+
+#editForm label {
+    font-size: 1.2em;
+    
+}
+
+#editForm button {
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
+}

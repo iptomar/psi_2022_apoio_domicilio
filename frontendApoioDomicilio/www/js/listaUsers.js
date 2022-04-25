@@ -10,8 +10,8 @@
                             <td>${data[i].dataNascimento}</td>
                             <td>${data[i].telemovel}</td>
                             <td><a href="/detalheUser.html">Detalhe</a></td>
-                            <td><a href="/users/updateUser">Editar</a></td>
-                            <td><a href="/users/deleteUser">Remover</a></td>
+                            <td><a href="/editarUser.html">Editar</a></td>
+                            <td><a href="/removeUser.html">Remover</a></td>
                            </tr>`
                 $("#usersTable tbody").append(row)
               }

@@ -1,7 +1,7 @@
 
 
     
-        $("form#formulario").ready(function (data){
+        $("#editForm").ready(function (data){
            data.preventDefault();
            var formData = new FormData(this);
            $.ajax({

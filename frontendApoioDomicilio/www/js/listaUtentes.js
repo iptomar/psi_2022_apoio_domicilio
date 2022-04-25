@@ -11,10 +11,13 @@
                             <td>${data[i].codigoPostal}</td>
                             <td>${data[i].contacto}</td>
                             <td>${data[i].contacEmergencia}</td>
-                            <td><a href="/utentes/oneUtente">Detalhe</a></td>
-                            <td><a href="/utentes/updateUtente">Editar</a></td>
-                            <td><a href="/utentes/deleteUtente">Remover</a></td>
-                           </tr>`
+                            <td><button type="button" class="btn btn-warning" onclick="getId(this)"><a href="/detalheUtente.html">Detalhes</a></td>
+                            <td><button type="button" class="btn btn-warning" onclick="getId(this)"><a href="/editarUtente.html">Editar</button></td>
+						    <td><g:link controller="utentesController" action="delete">
+								<button type="button" class="btn btn-danger" onclick="getConfirmation(this);">Remover</button>
+                                </g:link>
+                            </td>
+                        </tr>`
                 $("#utentesTable tbody").append(row)
               }
           });
