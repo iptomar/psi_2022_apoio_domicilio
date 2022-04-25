@@ -1,31 +1,25 @@
-var app = {
-    initialize: function(){
-document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-},
+$("form#detForm").ready(function (){
+   // event.preventDefault();
+    //var formData = new FormData(this);
+    $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
+        $("#nome").val(data.nome) 
+        $("#username").val(data.username) 
+        $("#password").val(data.password) 
+        $("#tipoUtilizador").val(data.tipoUtilizador) 
+        $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
+        //$("#foto").append('<img src="'+ data.foto +'" alt="something" />')
+        $("#telemovel").val(data.telemovel) 
+        $("#email").val(data.email) 
 
-onDeviceReady: function(){
-    $("#formulario").submit(function (event){
-       event.preventDefault();
-       $.ajax({
-           type: "GET",
-           url: "http://localhost:8080/api/users/oneUser",
-           data: {
-               
-               nome: $("#nome").val(),
-               username: $("#username").val(),
-               password: $("#password").val(),
-               tipoUtilizador: $("#tipoUtilizador").val(),
-               dataNascimento: $("#dataNascimento").val(),
-               foto: $("#foto").val(),
-               telemovel: $("#telemovel").val(),
-               email: $("#email").val()
+        alert("Data: " + data + "\nStatus: " + status);
+      });
+ });
 
-           },
-           sucess: function( data ){
-               alert(data);
-           }
-       });
-    });
-    }
-};
-app.initialize();
+ var queryString = location.search.substring(1);
+
+ var a = queryString.split("=");
+
+ var idUser = a[1]
+
+ console.log(queryString)
+ console.log(idUser)
