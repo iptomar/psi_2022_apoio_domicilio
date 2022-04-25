@@ -14,31 +14,37 @@
         <div id="header">
             <h2>Detalhe Utilizador</h2>
         </div>
-        <form id="detForm" method="post" enctype="multipart/form-data">
-           
-            <img src="foto"><br>
+        <form id="detForm" method="get">
+            <!-- <img src="foto"><br> -->
             <br>
             <label>Nome: </label>
-            <output type="text" name="nome" id="nome"><br>
-            <br>          
+            <input type="text" name="" id="nome"><br>
+            <br>                
             <label>Nome de Utilizador: </label>
-            <output type="text" name="username" id="username"><br>
+            <input type="text" name="" id="username"><br>
             <br>
-            <label for="tipoUtilizador">Tipo de utilizador: </label>
-            <output type="number" name="tipoUtilizador" id="tipoUtilizador"><br>
+            <label>Password: </label>
+            <input type="text" name="" id="password"><br>
+            <br>
+            <label>Tipo de utilizador: </label>
+            <input type="number" name="" id="tipoUtilizador"><br>
             <br>
             <label>Data de Nascimento: </label>
-            <output type="date" name="dataNascimento" id="dataNascimento"><br>
+            <input type="date" name="" id="dataNascimento"><br>
             <br>
             <label>Telemóvel: </label>
             <output type="text" name="telemovel" id="telemovel"><br>
             <br>
             <label>Email: </label>
-            <output type="text" name="email" id="email"><br>
+            <input type="text" name="" id="email"><br>
             <br>
+<!--             <button type="submit" onclick="window.location.href='listaUsers.html'">
+               Atualizar utilizador
+            </button> -->
             <button type="button" onclick="window.location.href='listaUsers.html'">
                 Voltar
             </button>
+        </form>
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
         <script src="js/detalheUser.js"></script>
