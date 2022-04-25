@@ -1,4 +1,3 @@
-
 $("#detForm").ready(function (){
     // event.preventDefault();
      //var formData = new FormData(this);

@@ -14,41 +14,36 @@
         <div id="header">
             <h2>Editar Utilizador</h2>
         </div>
-        <form id="editForm">
+        <form id="editForm" method="put">
+            <img src="foto"><br>
+            <br>
             <label>Nome: </label>
-            <output type="text" name="" id="nome"><br>
-            <br>          
+            <input type="text" name="" id="nome"><br>
+            <br>                
             <label>Nome de Utilizador: </label>
-            <output type="text" name="" id="username"><br>
+            <input type="text" name="" id="username"><br>
             <br>
-            <label>Password: </label>
-            <output type="text" name="" id="password"><br>
-            <br>
-            <label for="tipoUtilizador">Tipo de utilizador: </label>
-            <output type="number" name="" id="tipoUtilizador"><br>
+            <label>Tipo de utilizador: </label>
+            <input type="number" name="" id="tipoUtilizador"><br>
             <br>
             <label>Data de Nascimento: </label>
-            <output type="date" name="" id="dataNascimento"><br>
-            <br>
-            <label>Foto: </label>
-            <output type="text" name="" id="foto"><br>
+            <input type="date" name="" id="dataNascimento"><br>
             <br>
             <label>Telemóvel: </label>
-            <input type="text" name="" id="telemovel"><br>
+            <input type="text" name="telemovel" id="telemovel"><br>
             <br>
             <label>Email: </label>
-            <output type="text" name="" id="email"><br>
+            <input type="text" name="" id="email"><br>
             <br>
             <button type="submit" onclick="window.location.href='listaUsers.html'">
-               Atualizar
-            </button>
+               Atualizar utilizador
+            </button> 
             <button type="button" onclick="window.location.href='listaUsers.html'">
                 Voltar
             </button>
-
         </form>
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
-        <script src="js/editarUser.js"></script>
+        <script src="js/editaUser.js"></script>
     </body>
 </html>

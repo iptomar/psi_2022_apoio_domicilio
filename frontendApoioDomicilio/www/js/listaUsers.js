@@ -10,8 +10,8 @@
                             <td>${data[i].dataNascimento}</td>
                             <td>${data[i].telemovel}</td>
                             <td><a href="/detalheUser.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Detalhe</a></td>
-                            <td><a href="/users/updateUser">Editar</a></td>
-                            <td><a href="/users/deleteUser">Remover</a></td>
+                            <td><a href="/editaUser.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Editar</a></td>
+                            <td><a href="removeUser.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Remover</a></td>
                            </tr>`
                 $("#usersTable tbody").append(row)
               }

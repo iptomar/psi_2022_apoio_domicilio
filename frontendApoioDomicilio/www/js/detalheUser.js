@@ -1,17 +1,16 @@
-$("form#detForm").ready(function (){
+$("#detForm").ready(function (){
    // event.preventDefault();
     //var formData = new FormData(this);
     $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
+        $("#foto").append('<img src="'+ data.foto +'" alt="something" />')
         $("#nome").val(data.nome) 
         $("#username").val(data.username) 
-        $("#password").val(data.password) 
         $("#tipoUtilizador").val(data.tipoUtilizador) 
         $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
-        //$("#foto").append('<img src="'+ data.foto +'" alt="something" />')
         $("#telemovel").val(data.telemovel) 
         $("#email").val(data.email) 
 
-        alert("Data: " + data + "\nStatus: " + status);
+        //alert("Data: " + data + "\nStatus: " + status);
       });
  });
 
