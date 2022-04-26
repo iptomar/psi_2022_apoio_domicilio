@@ -26,16 +26,24 @@ $("#editForm").ready(function (){
   
 
 
-    // $("#editForm").submit(function (event){
-    //    event.preventDefault();
-    //    $.ajax({
-    //        type: "Put",
-    //        url: "http://localhost:8080/api/users/addUser" +idUser,
-    //        data: {},
-           
-    //        sucess: function( data ){
-    //            alert(data);
-    //        }
-    //    });
-    // });
-    
+  var app = {
+    initialize: function(){
+    document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+onDeviceReady: function(){
+    $("form#editForm").submit(function (event){
+       event.preventDefault();
+       var formData = new FormData(this);
+        $.ajax({
+            url: 'http://localhost:8080/api/users/'+idUser,
+            type: 'PUT',
+            data: formData,
+            success: function (result) {
+                alert("Data: " + data );
+            }
+        });
+    });
+    }
+};
+app.initialize();
