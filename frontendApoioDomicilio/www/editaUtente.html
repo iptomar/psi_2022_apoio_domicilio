@@ -5,16 +5,18 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/style.css">
-        <title>Adicionar Utente</title>
+        <title>Editar Utente</title>
     </head>
     <body>
         <div id="header">
             <h1>Apoio ao Domicilio</h1>
         </div>
         <div id="header">
-            <h2>Adicionar Utente</h2>
+            <h2>Editar Utente</h2>
         </div>
-        <form id="formulario" method="post" enctype="multipart/form-data">
+        <form id="editForm" method="put">
+            <img src="foto"><br>
+            <br>
             <label>Nome: </label>
             <input type="text" name="nome" id="nome"><br>
             <br> 
@@ -43,23 +45,20 @@
             <input type="text" name="contacto" id="contacto"><br>
             <br>
             <label>Contacto Emergência: </label>
-            <input type="text" name="contacEmergencia" id="contacEmergencia"><br>
-            <br>
-            <label>Foto: </label>
-            <input type="file" name="image" placeholder="Select file" id="foto"><br>
+            <input type="text" name="contacEmergencia" id="contactoEmergencia"><br>
             <br>
             <label>Notas: </label>
             <input type="textarea" name="notas" id="notas"><br>
             <br>
-            <button type="submit" onclick="window.location.href='listaUtentes.html'">
-                Criar utente
+            <button type="submit" onclick="window.location.href='editarUtente.html'">
+                Atualizar Utente
             </button>
-            <button type="button" onclick="window.location.href='listaUtentes'">
+            <button type="button" onclick="window.location.href='listaUtentes.html'">
                 Voltar
             </button>
         </form>
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
-        <script src="js/criaUtente.js"></script>
+        <script src="js/editaUtente.js"></script>
     </body>
 </html>
