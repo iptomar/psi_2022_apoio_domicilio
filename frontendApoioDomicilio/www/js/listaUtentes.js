@@ -12,11 +12,20 @@
                             <td>${data[i].contacEmergencia}</td>
                             <td><a href="/detalheUtente.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Detalhe</a></td>
                             <td><a href="/editaUtente.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Editar</a></td>
-                            <td><a href="removeUtente.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Remover</a></td>
+                            <td><a href="" onclick="remover(${data[i].id});return false;">Remover</a></td>
                         </tr>`
                 $("#utentesTable tbody").append(row)
               }
           });
        
     })
-           
+       
+    function remover(idUtente){
+        $.ajax({
+            url: "http://localhost:8080/api/utentes/"+idUtente,
+            type: "DELETE",
+            success: function(data) {
+              //play with data
+            }
+          });
+    }

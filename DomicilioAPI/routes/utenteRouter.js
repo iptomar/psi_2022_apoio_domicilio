@@ -11,7 +11,7 @@ const router = require('express').Router()
 
 router.get('/allUtentes', utenteController.getAllUtentes)
 
-router.post('/addUtente', userController.upload, utenteController.addUtente)
+router.post('/addUtente', utenteController.upload, utenteController.addUtente)
 
 router.get('/:id', utenteController.getOneUtente)
 

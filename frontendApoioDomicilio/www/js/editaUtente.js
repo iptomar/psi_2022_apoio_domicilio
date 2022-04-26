@@ -1,4 +1,5 @@
-$("#detForm").ready(function (){
+
+$("#editForm").ready(function (){
     // event.preventDefault();
      //var formData = new FormData(this);
      $.get("http://localhost:8080/api/utentes/"+idUtente, function(data, status){
