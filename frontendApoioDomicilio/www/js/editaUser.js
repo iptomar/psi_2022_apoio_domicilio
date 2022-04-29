@@ -25,24 +25,16 @@ $("#editForm").ready(function (){
  
 
 
-  var app = {
-    initialize: function(){
-    document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
-onDeviceReady: function(){
-    $("form#editForm").submit(function (event){
+    $("#editForm").submit(function (event){
        event.preventDefault();
-       var formData = new FormData(this);
+       var formData = $(this).serialize();
         $.ajax({
-            url: 'http://localhost:8080/api/users/'+idUser,
+            url: 'http://localhost:8080/api/users/'+idUser, // A valid URL
             type: 'PUT',
             data: formData,
-            success: function (result) {
-                alert("Data: " + data );
+            success: function(result) {
+              alert('Load was performed.');
             }
-        });
+          });
     });
-    }
-};
-app.initialize();
+   
