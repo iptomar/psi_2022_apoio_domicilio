@@ -1,7 +1,8 @@
 
     $("#utentesTable").ready(function (data){
 
-        $.get( "http://10.0.2.2:8080/api/utentes/allUtentes", function( data ) {
+      //$.get( "http://10.0.2.2:8080/api/utentes/allUtentes", function( data ) {
+        $.get( "http://localhost:8080/api/utentes/allUtentes", function( data ) {
             for (var i = 0; i < data.length; i++) {
                 var row = `<tr>
                             <td>${data[i].nome}</td>
