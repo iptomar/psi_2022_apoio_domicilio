@@ -20,7 +20,7 @@ $("#formLogin").submit(function (e){
 
      $.ajax({
         type: "POST",
-        url: "http://localhost:8080/api/users/", 
+        url: "http://10.0.2.2:8080/api/users/", 
         data: {
             acao: 'LoginWeb',
             username: $("#username").val(),
