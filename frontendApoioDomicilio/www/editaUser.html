@@ -18,30 +18,56 @@
             <img src="foto"><br>
             <br>
             <label>Nome: </label>
-            <input type="text" name="nome" id="nome"><br>
+            <input type="text" name="nome" id="nome" onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
             <br>                
             <label>Nome de Utilizador: </label>
-            <input type="text" name="username" id="username"><br>
+            <input type="text" name="username" id="username" onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
             <br>
             <label>Tipo de utilizador: </label>
-            <input type="number" name="tipoUtilizador" id="tipoUtilizador"><br>
+            <input type="number" name="tipoUtilizador" id="tipoUtilizador" min="1" max="4" onkeyup="this.value = this.value.replace(/[^1-4]/, '')" oninput="if(value.length>2)value=value.slice(0,1)"><br>
             <br>
             <label>Data de Nascimento: </label>
-            <input type="date" name="dataNascimento" id="dataNascimento"><br>
+            <input type="date" name="dataNascimento" id="dataNascimento" max="2004-12-31" ><br>
             <br>
-            <label>Telemóvel: </label>
-            <input type="text" name="telemovel" id="telemovel"><br>
+            <label id="labtel">Telemóvel: </label>
+            <input type="text" name="telemovel" id="telemovel" onkeyup="this.value = this.value.replace(/[^0-9]/, '')" maxlength="9"><br>
             <br>
             <label>Email: </label>
             <input type="text" name="email" id="email"><br>
             <br>
-            <button type="submit" onclick="window.location.href='listaUsers.html'">
+            <button type="submit" id="cont">
                Atualizar utilizador
             </button> 
             <button type="button" onclick="window.location.href='listaUsers.html'">
                 Voltar
             </button>
         </form>
+
+        <div class="pop">
+            <span class="helper"></span>
+            <div>
+                <p>Editar utilizador</p>
+                <label id="Lfoto"></label>
+                <label id="Lnome"></label>
+                <label id="LnomeDeUtilizador"></label>
+                <label id="LtipoUtilizador"></label>
+                <label id="LdataNascimento"></label>
+                <label id="Ltelemovel"></label>
+                <label id="Lemail"></label>
+                <button type="submit" onclick="window.location.href='listaUsers.html'">Continuar</button>
+                <button id="volt" type="submit">Voltar</button>
+            </div>
+        </div>
+
+        <!-- popup para numero de telemovel errado -->
+        <div class="telErrado">
+            <span class="helper"></span>
+            <div>
+                <p>Introduziu um número de telemovel errado</p>
+                <button id="voltt" type="submit">Voltar</button>
+            </div>
+        </div>
+
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
         <script src="js/editaUser.js"></script>
