@@ -49,6 +49,16 @@ const getOneUser = async (req, res) => {
 
 }
 
+// 3. get single user
+
+const getOneByName = async (req, res) => {
+
+    let username = req.params.username
+    let user = await User.findOne({ where: { username: username }})
+    res.status(200).send(user)
+
+}
+
 // 4. update user
 
 const updateUser = async (req, res) => {
@@ -105,6 +115,7 @@ module.exports = {
     getAllUsers,
     addUser,
     getOneUser,
+    getOneByName,
     updateUser,
     deleteUser,
     storage,

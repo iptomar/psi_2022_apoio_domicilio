@@ -1,4 +1,3 @@
-
 $("#detForm").ready(function (){
     // event.preventDefault();
      //var formData = new FormData(this);
@@ -7,7 +6,7 @@ $("#detForm").ready(function (){
          $("#nome").val(data.nome) 
          $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
          $("#sitUtente").val(data.sitUtente) 
-         $("#dAlteraSit").val(data.dAlteraSit) 
+         $("#dAlteraSit").val(data.dAlteraSit.substring(0,10))
          $("#estadoCivil").val(data.estadoCivil) 
          $("#nacionalidade").val(data.nacionalidade)
          $("#morada").val(data.morada)
@@ -16,7 +15,6 @@ $("#detForm").ready(function (){
          $("#contacEmergencia").val(data.contacEmergencia)
          $("#notas").val(data.notas)
       
-         //alert("Data: " + data + "\nStatus: " + status);
        });
   });
  

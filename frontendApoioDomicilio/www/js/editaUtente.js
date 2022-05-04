@@ -1,13 +1,11 @@
 
 $("#editForm").ready(function (){
-    // event.preventDefault();
-     //var formData = new FormData(this);
      $.get("http://localhost:8080/api/utentes/"+idUtente, function(data, status){
          $("#foto").append('<img src="'+ data.foto +'" alt="something" />')
          $("#nome").val(data.nome) 
          $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
          $("#sitUtente").val(data.sitUtente) 
-         $("#dAlteraSit").val(data.dAlteraSit) 
+         $("#dAlteraSit").val(data.dAlteraSit.substring(0,10)) 
          $("#estadoCivil").val(data.estadoCivil) 
          $("#nacionalidade").val(data.nacionalidade)
          $("#morada").val(data.morada)
@@ -15,8 +13,7 @@ $("#editForm").ready(function (){
          $("#contacto").val(data.contacto)
          $("#contacEmergencia").val(data.contacEmergencia)
          $("#notas").val(data.notas)
-      
-         //alert("Data: " + data + "\nStatus: " + status);
+
        });
   });
  
@@ -42,4 +39,3 @@ $("#editForm").ready(function (){
           }
       });
   });
-  

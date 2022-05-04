@@ -5,7 +5,7 @@
             for (var i = 0; i < data.length; i++) {
                 var row = `<tr>
                             <td>${data[i].nome}</td>
-                            <td>${data[i].dataNascimento}</td>
+                            <td>${data[i].dataNascimento.substring(0,10)}</td>
                             <td>${data[i].sitUtente}</td>
                             <td>${data[i].codigoPostal}</td>
                             <td>${data[i].contacto}</td>
