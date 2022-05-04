@@ -1,6 +1,4 @@
 $("form#detForm").ready(function (){
-   // event.preventDefault();
-    //var formData = new FormData(this);
     $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
         $("#nome").val(data.nome) 
         $("#username").val(data.username) 
@@ -11,7 +9,6 @@ $("form#detForm").ready(function (){
         $("#telemovel").val(data.telemovel) 
         $("#email").val(data.email) 
 
-        alert("Data: " + data + "\nStatus: " + status);
       });
  });
 

@@ -5,18 +5,18 @@
 
 #header {
     width: 100%;
-    background-color: rgb(113, 39, 250);
+    background-color: rgb(69, 160, 206);
     height: 70px;
 }
 
 #header h1{
-    color: #E1E1E1;
+    color: #c9eaf4;
     text-align: center;
     padding-top: 30px;
 }
 
 #header h2{
-    color: #e5ed76;
+    color: #fdfefe;
     text-align: center;
     padding-top: 20px;
 }
@@ -71,4 +71,51 @@
     width: 170px;
     text-align: center;
 
+}
+
+#detForm {
+    padding-top: 10px;
+    height: 1.5em;
+    padding-left: 10px;  
+    text-align: center; 
+}
+
+#detForm label {
+    font-size: 1.2em;
+    
+}
+
+#detForm button {
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
+}
+
+#editForm {
+    padding-top: 10px;
+    height: 1.5em;
+    padding-left: 10px;  
+    text-align: center; 
+}
+
+#editForm label {
+    font-size: 1.2em;
+    
+}
+
+#editForm button {
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
+}
+#detFoto{
+    padding-top: 10px;
+    size: 25px;
+    text-align: center;  
+}
+
+#backButton{
+    font-size: 1.2em;
+    width: 170px;
+    text-align: center;
 }

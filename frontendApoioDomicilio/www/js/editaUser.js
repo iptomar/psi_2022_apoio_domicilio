@@ -8,8 +8,6 @@ console.log(queryString)
 console.log(idUser)
 
 $("#editForm").ready(function (){
-    // event.preventDefault();
-     //var formData = new FormData(this);
      $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
         
          $("#nome").val(data.nome) 
@@ -18,8 +16,7 @@ $("#editForm").ready(function (){
          $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
          $("#telemovel").val(data.telemovel) 
          $("#email").val(data.email) 
- 
-         //alert("Data: " + data + "\nStatus: " + status);
+
        });
   });
  
@@ -29,7 +26,7 @@ $("#editForm").ready(function (){
        event.preventDefault();
        var formData = $(this).serialize();
         $.ajax({
-            url: 'http://localhost:8080/api/users/'+idUser, // A valid URL
+            url: 'http://localhost:8080/api/users/'+idUser, 
             type: 'PUT',
             data: formData,
             success: function(result) {

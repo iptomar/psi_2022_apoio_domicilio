@@ -18,17 +18,15 @@
         <form id="formLogin">
              
               <label>Utilizador</label>
-              <input id="user" name="utilizador" type="text" />
+              <input id="username" name="username" type="text" />
               <br><br>
          
               <label>Password</label>
               <input id="password" name="password" type="password" />
               <br><br><br>
 
-          
-              <button type="button" onclick="window.location.href='listaUtentes.html'">Entrar</button>
-              <button type="button" onclick="window.location.href='listaUsers.html'">Users-provisório</button>
-              
+              <button class="botaologin" type="button" onclick="login(document.getElementById('username')
+                            .value,document.getElementById('password').value)">Entrar</button>              
         </form>  
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>

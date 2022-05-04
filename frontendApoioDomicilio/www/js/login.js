@@ -1,53 +1,22 @@
-"use strict";
-var Index = {
+function login(username,password) {
+    //alert("username: " + user + "password: " + password);
 
-    //Application Constructor
-    init: function() {
-        this.bindEvents();
-    },
+    $.get("http://localhost:8080/api/users/name/"+username, function(data){
 
-    //Bind Event Listeners
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    
-    //Event Handle
-    onDeviceReady: function() {
-
-
-$("#formLogin").submit(function (e){
-    e.preventDefault();
-
-     $.ajax({
-        type: "POST",
-        url: "http://localhost:8080/api/users/", 
-        data: {
-            acao: 'LoginWeb',
-            username: $("#username").val(),
-            password: $("#password").val()
-        },            
-        async: false,
-        dataType: "json", 
-        success: function (json) {
-
-            if(json.result == true){
-               //redireciona o utilizador para pagina
-               //if(username==username && password==password)
-               //$("#utilizadores").html(json.dados.nome);
-               //else
-               //$("#utentes").html(json.dados.nome);
-
-               $.mobile.changePage("#index", {
-                    transition : "slidefade"
-                });
-
-            }else{
-               alert(json.msg);
+        if(username == data.username && password == data.password){
+            if( data.tipoUtilizador == 1){
+                window.open('listaUsers.html')
             }
-        },error: function(xhr,e,t){
-            console.log(xhr.responseText);                
+            if( data.tipoUtilizador == 2) {
+                window.open('listaUtentes.html')
+            }
+            if( data.tipoUtilizador != 1 && data.tipoUtilizador != 2) {
+                alert("Tipo de utilizador não reconhecido");
+            }
+
+        }
+        else{
+            alert("Palavra passe ou utilizador está incorreta");
         }
     });
-  });
 }
-};

@@ -14,6 +14,8 @@ router.post('/addUser', userController.upload , userController.addUser)
 
 router.get('/:id', userController.getOneUser)
 
+router.get('/name/:username', userController.getOneByName)
+
 router.put('/:id', userController.updateUser)
 
 router.delete('/:id', userController.deleteUser)

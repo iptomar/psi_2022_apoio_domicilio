@@ -1,12 +1,11 @@
-$("#detForm").ready(function (){
-    // event.preventDefault();
-     //var formData = new FormData(this);
+
+$("#editForm").ready(function (){
      $.get("http://localhost:8080/api/utentes/"+idUtente, function(data, status){
-         $("#foto").val(data.foto)
+         $("#foto").append('<img src="'+ data.foto +'" alt="something" />')
          $("#nome").val(data.nome) 
          $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
          $("#sitUtente").val(data.sitUtente) 
-         $("#dAlteraSit").val(data.dAlteraSit.substring(0,10))
+         $("#dAlteraSit").val(data.dAlteraSit.substring(0,10)) 
          $("#estadoCivil").val(data.estadoCivil) 
          $("#nacionalidade").val(data.nacionalidade)
          $("#morada").val(data.morada)
@@ -14,7 +13,6 @@ $("#detForm").ready(function (){
          $("#contacto").val(data.contacto)
          $("#contacEmergencia").val(data.contacEmergencia)
          $("#notas").val(data.notas)
-      
        });
   });
  
@@ -26,6 +24,17 @@ $("#detForm").ready(function (){
  
   console.log(queryString)
   console.log(idUtente)
-
-  // $.get("http://localhost:8080/api/")
  
+
+  
+  $("#editForm").submit(function (event){
+    event.preventDefault();
+    var formData = $(this).serialize();
+      $.ajax({
+          url: 'http://localhost:8080/api/utentes/'+idUtente,
+          type: 'PUT',
+          data: formData,
+          success: function (result) {
+          }
+      });
+  });
