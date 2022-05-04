@@ -44,16 +44,3 @@ const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}`)
 })
-
-// Handle error
-app.use((req, res, next) => {
-  setImmediate(() => {
-    next(new Error('Error occured'));
-  });
-});
-
-app.use(function (err, req, res, next) {
-  console.error(err.message);
-  if (!err.statusCode) err.statusCode = 500;
-  res.status(err.statusCode).send(err.message);
-});
