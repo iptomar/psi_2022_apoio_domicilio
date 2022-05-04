@@ -10,14 +10,19 @@ const router = require('express').Router()
 
 router.get('/allUsers', userController.getAllUsers)
 
-router.post('/addUser', userController.upload , userController.addUser)
+router.post('/addUser', userController.uploadFoto , userController.addUser)
 
 router.get('/:id', userController.getOneUser)
+
+router.get('/:username', userController.getOneByName)
 
 router.put('/:id', userController.updateUser)
 
 router.delete('/:id', userController.deleteUser)
 
+router.get('/:id', userController.getFoto)
+
+//router.post("/upload-foto", controller.uploadFoto)
 
 
 module.exports = router

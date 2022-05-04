@@ -22,3 +22,12 @@ $("#detForm").ready(function (){
 
  console.log(queryString)
  console.log(idUser)
+
+var fileName = file.originalname
+console.log(fileName)
+
+ $("#detFoto").ready(function(){
+ $.get("http://localhost:8080/Images/"+fileName, function(file, status){
+        $("#file").append(file)
+    });
+ });

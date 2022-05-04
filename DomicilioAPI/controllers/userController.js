@@ -3,6 +3,12 @@ const db = require('../models')
 // image Upload
 const multer = require('multer')
 const path = require('path')
+const fs = require('fs')
+const { nextTick } = require('process')
+const res = require('express/lib/response')
+
+
+//const upload = require("../middleware/fotoUpload");
 
 // create main Model
 const User = db.users
@@ -49,6 +55,17 @@ const getOneUser = async (req, res) => {
 
 }
 
+
+// 3. get single user
+
+const getOneByName = async (req, res) => {
+
+    let username = req.params.username
+    let user = await User.findOne({ where: { username: username }})
+    res.status(200).send(user)
+
+}
+
 // 4. update user
 
 const updateUser = async (req, res) => {
@@ -70,43 +87,103 @@ const deleteUser = async (req, res) => {
     
     await User.destroy({ where: { id: id }} )
 
-    res.status(200).send('User is deleted !')
+    res.status(200).send('Utilizador foi removido!')
 
 }
 
 // 6. Upload Image Controller
 
-const storage = multer.diskStorage({
+
+
+  let storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'Images')
     },
-    filename: (req, file, cb) => {
+    fileName: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname))
-    }
-})
 
-const upload = multer({
+    }
+
+    
+});
+
+const uploadFoto = multer({
     storage: storage,
-    limits: { fileSize: '1000000' },
+    limits: {
+        fileSize: 1024 * 1024 * 5
+    },
     fileFilter: (req, file, cb) => {
-        const fileTypes = /jpeg|jpg|png|gif/
-        const mimeType = fileTypes.test(file.mimetype)  
-        const extname = fileTypes.test(path.extname(file.originalname))
 
-        if(mimeType && extname) {
-            return cb(null, true)
-        }
-        cb('Give proper files formate to upload')
-    }
+                const fileTypes = /jpeg|jpg|png|gif/
+                const mimeType = fileTypes.test(file.mimetype)  
+                const extname = fileTypes.test(path.extname(file.originalname))
+        
+                if(mimeType && extname) {
+                    return cb(null, true)
+                }
+                cb('Give proper files formate to upload')
+            }
 }).single('image')
 
+
+
+// const uploadFoto = async (req, res) => {
+//     try {
+//       await upload(req, res);
+  
+//       if (req.foto == undefined) {
+//         return res.status(400).send({ message: "Escolhe foto a adicionar" });
+//       }
+  
+//       res.status(200).send({
+//         message: "Foto adicionada com sucesso: " + req.foto.originalname,
+//       });
+//     } catch (err) {
+//       console.log(err);
+  
+//       if (err.code == "LIMIT_FILE_SIZE") {
+//         return res.status(500).send({
+//           message: "Tamanho máximo da foto 5MB",
+//         });
+//       }
+  
+//       res.status(500).send({
+//         message: `Ocorreu erro: ${err}`,
+//       });
+//     }
+//   };
+
+// fs.readFile(path: (err, data) =>{
+// if(err) {
+//     return nextTick(err)
+// }
+// res.setHeader('attachment: filename"' + filename + '"')
+// res.send(data)
+// })
+
+
+
+  const getFoto = (req, res) => {
+    let fileName = req.params.name;
+    const path = path.extname(file.originalname)  + "/Images/";
+  
+    res.download(path + fileName, (err) => {
+      if (err) {
+        res.status(500).send({
+          message: "Foto não obtida: " + err,
+        });
+      }
+    });
+};
 
 module.exports = {
     getAllUsers,
     addUser,
     getOneUser,
+    getOneByName,
     updateUser,
     deleteUser,
-    storage,
-    upload
+    //storage,
+    uploadFoto,
+    getFoto
 }
