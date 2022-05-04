@@ -15,7 +15,7 @@ $("#editForm").ready(function (){
          $("#tipoUtilizador").val(data.tipoUtilizador) 
          $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
          $("#telemovel").val(data.telemovel) 
-         $("#email").val(data.email) 
+         $("#email").val(data.email)
 
        });
   });
@@ -34,4 +34,3 @@ $("#editForm").ready(function (){
             }
           });
     });
-   

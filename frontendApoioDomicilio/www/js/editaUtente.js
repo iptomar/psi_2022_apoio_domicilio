@@ -13,6 +13,7 @@ $("#editForm").ready(function (){
          $("#contacto").val(data.contacto)
          $("#contacEmergencia").val(data.contacEmergencia)
          $("#notas").val(data.notas)
+
        });
   });
  

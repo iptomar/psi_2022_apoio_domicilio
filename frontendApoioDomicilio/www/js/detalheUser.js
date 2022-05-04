@@ -1,11 +1,11 @@
+
 $("form#detForm").ready(function (){
     $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
+        //$("#foto").append('<img src="'+ data.foto +'" alt="something" />')
         $("#nome").val(data.nome) 
         $("#username").val(data.username) 
-        $("#password").val(data.password) 
         $("#tipoUtilizador").val(data.tipoUtilizador) 
         $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
-        //$("#foto").append('<img src="'+ data.foto +'" alt="something" />')
         $("#telemovel").val(data.telemovel) 
         $("#email").val(data.email) 
 

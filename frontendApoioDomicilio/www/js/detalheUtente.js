@@ -26,6 +26,4 @@ $("#detForm").ready(function (){
  
   console.log(queryString)
   console.log(idUtente)
-
-  // $.get("http://localhost:8080/api/")
  
