@@ -1,8 +1,13 @@
 const db = require('../models')
 
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+
+
 // image Upload
 const multer = require('multer')
-const path = require('path')
+const path = require('path');
+const { USER } = require('../config/dbConfig');
 
 // create main Model
 const User = db.users
@@ -14,11 +19,12 @@ const User = db.users
 // 1. create user
 
 const addUser = async (req, res) => {
-
+    const password = req.body.password;    
+    const encryptedPassword = await bcrypt.hash(password, saltRounds)
     let info = {
         nome: req.body.nome,
         username: req.body.username,
-        password: req.body.password,
+        password: encryptedPassword,
         tipoUtilizador: req.body.tipoUtilizador,
         dataNascimento: req.body.dataNascimento,
         image: req.file.path,
@@ -35,9 +41,11 @@ const addUser = async (req, res) => {
 // 2. get all users
 const getAllUsers = async(req, res) => {
 
-    let users = await User.findAll({})
+    let users = await User.findAll({
+    })
     res.status(200).send(users)
 }
+
 
 // 3. get single user
 
@@ -46,6 +54,28 @@ const getOneUser = async (req, res) => {
     let id = req.params.id
     let user = await User.findOne({ where: { id: id }})
     res.status(200).send(user)
+
+}
+
+// 3. get single user by Username
+
+const getUserByUsername = async (req, res) => {
+
+    let users = await User.findAll({
+        attributes: ['username']
+    })
+    res.status(200).send(users)
+
+}
+
+// 3. get single user by Password
+
+const getUserByPassword = async (req, res) => {
+
+    let users = await User.findAll({
+        attributes: ['password']
+            })
+    res.status(200).send(users)
 
 }
 
@@ -72,6 +102,36 @@ const deleteUser = async (req, res) => {
 
     res.status(200).send('User is deleted !')
 
+}
+
+
+// Login controller
+const login = async (req, res) => {
+	// Capture the input fields
+	let username = req.body.username;
+	let password = req.body.password;
+	// Ensure the input fields exists and are not empty
+	if (username && password) {
+		// Execute SQL query that'll select the account from the database based on the specified username and password
+		connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+			// If there is an issue with the query, output the error
+			if (error) throw error;
+			// If the account exists
+			if (results.length > 0) {
+				// Authenticate the user
+				req.session.loggedin = true;
+				req.session.username = username;
+				// Redirect to home page
+				//response.redirect('/home');
+			} else {
+				res.send('Incorrect Username and/or Password!');
+			}			
+			res.end();
+		});
+	} else {
+		res.send('Please enter Username and Password!');
+		res.end();
+	}
 }
 
 // 6. Upload Image Controller
@@ -107,5 +167,9 @@ module.exports = {
     getOneUser,
     updateUser,
     deleteUser,
-    upload
+    upload,
+    login,
+    getUserByUsername,
+    getUserByPassword,
+    
 }

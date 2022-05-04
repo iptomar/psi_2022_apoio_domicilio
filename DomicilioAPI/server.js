@@ -22,6 +22,7 @@ const router1 = require('./routes/utenteRouter.js')
 app.use('/api/utentes', router1)
 
 
+
 //static Images Folder
 
 app.use('/Images', express.static('./Images'))

@@ -1,53 +1,20 @@
-"use strict";
-var Index = {
 
-    //Application Constructor
-    init: function() {
-        this.bindEvents();
-    },
+function validate(){
 
-    //Bind Event Listeners
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
+    var checkUsername=document.getElementById("username").value;
+    var checkPassword=document.getElementById("password").value;
     
-    //Event Handle
-    onDeviceReady: function() {
-
-
-$("#formLogin").submit(function (e){
-    e.preventDefault();
-
-     $.ajax({
-        type: "POST",
-        url: "http://localhost:8080/api/users/", 
-        data: {
-            acao: 'LoginWeb',
-            username: $("#username").val(),
-            password: $("#password").val()
-        },            
-        async: false,
-        dataType: "json", 
-        success: function (json) {
-
-            if(json.result == true){
-               //redireciona o utilizador para pagina
-               //if(username==username && password==password)
-               //$("#utilizadores").html(json.dados.nome);
-               //else
-               //$("#utentes").html(json.dados.nome);
-
-               $.mobile.changePage("#index", {
-                    transition : "slidefade"
-                });
-
+    $.get( "http://localhost:8080/api/users/getUserByUsername", function( data ) {
+        for (var i = 0; i < data.length; i++) {
+            username = data[i].username;
+            if (checkUsername == username){
+                alert("Login com sucesso");
             }else{
-               alert(json.msg);
+                alert("Login sem sucesso");
             }
-        },error: function(xhr,e,t){
-            console.log(xhr.responseText);                
+
         }
-    });
-  });
-}
-};
+    })  
+
+    }
+    
