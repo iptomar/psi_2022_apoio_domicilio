@@ -114,6 +114,12 @@
     text-align: center;  
 }
 
+#foto{
+    width:50%;
+    /* max-width:256px; */
+    height:auto;
+}
+
 #backButton{
     font-size: 1.2em;
     width: 170px;

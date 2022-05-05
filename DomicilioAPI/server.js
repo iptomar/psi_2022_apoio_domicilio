@@ -4,6 +4,8 @@ const cors = require('cors')
 
 const app = express()
 
+global.__basedir = __dirname;
+
 // middleware
 
 app.use(cors());
@@ -22,6 +24,9 @@ app.use('/api/users', router)
   // utente routers
 const router1 = require('./routes/utenteRouter.js')
 app.use('/api/utentes', router1)
+  // files routers
+const router2 = require('./routes/fileRouter.js')
+app.use('/api', router2)
 
 
 //static Images Folder
