@@ -118,6 +118,5 @@ module.exports = {
     getOneByName,
     updateUser,
     deleteUser,
-    storage,
     upload
 }
