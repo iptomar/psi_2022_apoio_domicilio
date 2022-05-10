@@ -27,6 +27,9 @@ app.use('/api/utentes', router1)
   // files routers
 const router2 = require('./routes/fileRouter.js')
 app.use('/api', router2)
+// medicamentos routers
+const router3 = require('./routes/mediRouter.js')
+app.use('/api/medicamentos', router3)
 
 
 //static Images Folder

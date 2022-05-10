@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Editar Medicamento</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Apoio ao Domicilio</h1>
+        </div>
+        <div id="header">
+            <h2>Editar Medicamento</h2>
+        </div>
+        <form id="formulario" method="post" enctype="multipart/form-data">
+            <label>Nome: </label>
+            <input type="text" name="nome" id="nome"><br>
+            <br>          
+            <label>Farmacêutica: </label>
+            <input type="text" name="username" id="username"><br>
+            <br>
+            <label>principio activo: </label>
+            <input type="text" name="password" id="password"><br>
+            <br>
+            <label>Dosagem: </label>
+            <input type="text" name="tipoUtilizador" id="tipoUtilizador"><br>
+            <br>
+            <label>Formato: </label>
+            <input type="date" name="dataNascimento" id="dataNascimento"><br>
+            <br>
+            <button type="submit"  onclick="window.location.href='listaMed.html'">
+               Adicionar
+            </button>
+            <button type="button" onclick="window.location.href='listaMed.html'">
+                Voltar
+            </button>
+        </form>
+        <script src="js/jquery.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/editaMed.js"></script>
+    </body>
+</html>

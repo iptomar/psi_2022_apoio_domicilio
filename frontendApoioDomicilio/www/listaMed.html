@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Lista de Medicamentos</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Apoio ao Domicilio</h1>
+        </div>
+        <div id="header">
+            <h2> Lista de Medicamentos </h2>
+        </div>
+        <body>
+            <table id='medTable' border="1">
+                <thead>          
+                        <tr>
+                            <th>Nome</th>
+                            <th>Farmacêutica</th>
+                            <th>Principio Activo</th>
+                            <th>Dosagem</th>
+                            <th>Formato</th>
+                            <!-- <th>Detalhe</th> -->
+                            <th>Editar</th>
+                            <th>Remover</th>
+                        </tr> 
+                </thead>
+                <tbody>                                           
+                </tbody>        
+            </table> 
+            <button id="addButton" type="button" onclick="window.location.href='CriaMed.html'">
+                Adicionar Medicamento
+                </button>  
+            <button id="backButton" type="button" onclick="window.location.href='menu.html'">
+                Voltar
+            </button>                            
+        </body>           
+        <script src="js/jquery.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/listaMed.js"></script>
+    </body> 
+</html>
