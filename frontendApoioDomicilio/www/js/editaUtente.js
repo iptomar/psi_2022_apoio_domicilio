@@ -1,7 +1,6 @@
 
 $("#editForm").ready(function (){
      $.get("http://localhost:8080/api/utentes/"+idUtente, function(data, status){
-         $("#foto").append('<img src="'+ data.foto +'" alt="something" />')
          $("#nome").val(data.nome) 
          $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
          $("#sitUtente").val(data.sitUtente) 

@@ -2,7 +2,9 @@ $("#detForm").ready(function (){
     // event.preventDefault();
      //var formData = new FormData(this);
      $.get("http://localhost:8080/api/utentes/"+idUtente, function(data, status){
-         $("#foto").val(data.foto)
+        let fotoAux = data.foto.substring(7)
+         $("#detFoto").append('<img id="foto" src="http://localhost:8080/api/files/'+ fotoAux + '" alt="something" />')
+         foto = data.foto
          $("#nome").val(data.nome) 
          $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
          $("#sitUtente").val(data.sitUtente) 

@@ -111,13 +111,10 @@
 #detFoto{
     padding-top: 10px;
     size: 25px;
-    text-align: center;  
-}
-
-#foto{
-    width:50%;
-    /* max-width:256px; */
     height:auto;
+    width:auto;
+    text-align: center;
+    
 }
 
 #backButton{
