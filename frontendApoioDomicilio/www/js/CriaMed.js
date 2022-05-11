@@ -9,7 +9,7 @@ onDeviceReady: function(){
        var formData = new FormData(this);
        $.ajax({
            type: "POST",
-           url: "http://localhost:8080/api/Medicamentos/addMed",
+           url: "http://localhost:8080/api/medicamentos/addMed",
            data: formData,
            cache: false,
            processData: false, 

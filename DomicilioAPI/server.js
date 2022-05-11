@@ -28,7 +28,7 @@ app.use('/api/utentes', router1)
 const router2 = require('./routes/fileRouter.js')
 app.use('/api', router2)
 // medicamentos routers
-const router3 = require('./routes/mediRouter.js')
+const router3 = require('./routes/medRouter.js')
 app.use('/api/medicamentos', router3)
 
 

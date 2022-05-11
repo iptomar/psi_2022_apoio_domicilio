@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         dosagem: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         formato: {
             type: DataTypes.STRING
