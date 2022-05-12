@@ -12,6 +12,8 @@ router.get('/allMed', medController.getAllMed)
 
 router.post('/addMed', medController.addMed)
 
+router.get('/:id', medController.getOneMed)
+
 router.put('/:id', medController.updateMed)
 
 router.delete('/:id', medController.deleteMed)

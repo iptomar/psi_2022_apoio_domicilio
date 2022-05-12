@@ -15,6 +15,7 @@ $("#editForm").ready(function (){
          $("#principio").val(data.principio) 
          $("#dosagem").val(data.dosagem) 
          $("#formato").val(data.formato) 
+        //  $("#stock").val(data.stock)
        });
   });
  
@@ -26,7 +27,7 @@ $("#editForm").ready(function (){
         $.ajax({
             url: 'http://localhost:8080/api/medicamentos/'+idMed, 
             type: 'PUT',
-            data: formData,
+             data: formData,
             success: function(result) {
               alert('Load was performed.');
             }

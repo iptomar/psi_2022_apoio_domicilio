@@ -15,7 +15,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         formato: {
             type: DataTypes.STRING
-        }
+        },
+        // stock: {
+        //     type: DataTypes.INTEGER
+        // }
+
+
     })
 
     return Medicamento

@@ -20,7 +20,8 @@ const addMed = async (req, res) => {
         farmaceutica: req.body.farmaceutica,
         principio: req.body.principio,
         dosagem: req.body.dosagem,
-        formato: req.body.formato
+        formato: req.body.formato,
+        // stock:req.body.stock
     }
 
     const medicamento = await Medicamento.create(info)
@@ -36,6 +37,15 @@ const getAllMed = async(req, res) => {
     res.status(200).send(medicamentos)
 }
 
+// 3. get single medicamento
+
+const getOneMed = async (req, res) => {
+
+    let id = req.params.id
+    let medicamento = await Medicamento.findOne({ where: { id: id }})
+    res.status(200).send(medicamento)
+
+}
 
 
 // 3. update Medicamentos
@@ -68,6 +78,7 @@ const deleteMed = async (req, res) => {
 module.exports = {
     getAllMed,
     addMed,
+    getOneMed,
     updateMed,
     deleteMed
     

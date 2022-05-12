@@ -6,6 +6,7 @@ var app = {
 onDeviceReady: function(){
     $("#formulario").submit(function (event){
        event.preventDefault();
+       var formData = new FormData(this);
        $.ajax({
            type: "POST",
            url: "http://localhost:8080/api/medicamentos/addMed",
@@ -15,6 +16,7 @@ onDeviceReady: function(){
                principio: $("#principio").val(),
                dosagem: $("#dosagem").val(),
                formato: $("#formato").val(),
+            //    stock: $("#stock").val()
         },
            sucess: function( data ){
                alert(data);
