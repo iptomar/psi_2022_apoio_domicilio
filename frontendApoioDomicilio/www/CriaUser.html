@@ -1,53 +1,117 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Adicionar Utilizador</title>
-    </head>
-    <body>
-        <div id="header">
-            <h1>Apoio ao Domicilio</h1>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Adicionar Utilizador</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Apoio ao Domicilio</h1>
+    </div>
+    <div id="header">
+        <h2>Adicionar Utilizador</h2>
+    </div>
+    <form id="formulario" onsubmit="return verificar()" method="post" enctype="multipart/form-data">
+        
+        <label id="labnome">Nome: </label>
+        <input type="text" name="nome" id="nome" onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
+        <br>
+
+        <label id="labusername">Nome de Utilizador: </label>
+        <input type="text" name="username" id="username"
+            onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
+        <br>
+
+        <label id="labpass">Password: </label>
+        <input type="text" name="password" id="password" onkeyup="this.value = this.value.replace(/[^a-Z]/, '')"
+            maxlength="9"><br>
+        <br>
+
+        <label id="labtipo" for="tipoUtilizador">Tipo de utilizador: </label>
+        <input type="number" name="tipoUtilizador" id="tipoUtilizador" min="1" max="4"
+            onkeyup="this.value = this.value.replace(/[^1-4]/, '')"
+            oninput="if(value.length>2)value=value.slice(0,1)"><br>
+        <br>
+
+        <label id="labnasc">Data de Nascimento: </label>
+        <input type="date" name="dataNascimento" id="dataNascimento" max="2004-12-31"><br>
+        <br>
+
+        <label id="labfoto">Foto: </label>
+        <input type="file" name="image" placeholder="Select file" id="foto"><br>
+        <br>
+
+        <label id="labtel">Telemóvel: </label>
+        <input type="text" name="telemovel" id="telemovel" onkeyup="this.value = this.value.replace(/[^0-9]/, '')"
+            maxlength="9"><br>
+        <br>
+
+        <label id="labmail">Email: </label>
+        <input type="text" name="email" id="email"><br>
+        <br>
+
+        <button type="submit">
+            Adicionar
+        </button>
+
+        <button type="button" onclick="window.location.href='listaUsers.html'">
+            Voltar
+        </button>
+
+    </form>
+
+
+    <!-- <div class="pop">
+        <span class="helper"></span>
+        <div>
+            <p>Adicionou um utilizador</p>
+            <label id="Lnome"></label>
+            <label id="LnomeDeUtilizador"></label>
+            <label id="Lpassword"></label>
+            <label id="LtipoUtilizador"></label>
+            <label id="LdataNascimento"></label>
+            <label id="Lfoto"></label>
+            <label id="Ltelemovel"></label>
+            <label id="Lemail"></label>
+            <button id="cont" type="button" onclick="window.location.href='listaUsers.html'">Continuar</button>
+            <button id="volt" type="button" onclick="volt()">Voltar</button>
         </div>
-        <div id="header">
-            <h2>Adicionar Utilizador</h2>
+    </div>
+-->
+
+    <div class="pop">
+        <span class="helper"></span>
+        <div>
+            <button onclick="window.location.href='listaUsers.html'">Continuar</button>
         </div>
-        <form id="formulario" method="post" enctype="multipart/form-data">
-            <label>Nome: </label>
-            <input type="text" name="nome" id="nome"><br>
-            <br>          
-            <label>Nome de Utilizador: </label>
-            <input type="text" name="username" id="username"><br>
-            <br>
-            <label>Password: </label>
-            <input type="text" name="password" id="password"><br>
-            <br>
-            <label>Tipo de utilizador: </label>
-            <input type="text" name="tipoUtilizador" id="tipoUtilizador"><br>
-            <br>
-            <label>Data de Nascimento: </label>
-            <input type="date" name="dataNascimento" id="dataNascimento"><br>
-            <br>
-            <label>Foto: </label>
-            <input type="file"  name="image" placeholder="Select file" id="foto"><br>
-            <br>
-            <label>Telemóvel: </label>
-            <input type="text"  name="telemovel" id="telemovel"><br>
-            <br>
-            <label>Email: </label>
-            <input type="text" name="email" id="email"><br>
-            <br>
-            <button type="submit"  onclick="window.location.href='listaUsers.html'">
-               Adicionar
-            </button>
-            <button type="button" onclick="window.location.href='listaUsers.html'">
-                Voltar
-            </button>
-        </form>
-        <script src="js/jquery.js"></script>
-        <script src="cordova.js"></script>
-        <script src="js/CriaUser.js"></script>
-    </body>
+    </div>
+
+    <!-- popup para numero de telemovel errado -->
+    <div class="telErrado">
+        <span class="helper"></span>
+        <div>
+            <p>Introduziu um número de telemovel errado</p>
+            <button id="voltt" type="button" onclick="voltt()">Voltar</button>
+        </div>
+    </div>
+
+
+    <div class="DadosIncomp">
+        <span class="helper"></span>
+        <div>
+            <p>Por favor introduza toda a informação</p>
+            <button id="volta" type="button" onclick="volttt()">Voltar</button>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/CriaUser.js"></script>
+</body>
+
 </html>

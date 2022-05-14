@@ -1,63 +1,116 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Editar Utente</title>
-    </head>
-    <body>
-        <div id="header">
-            <h1>Apoio ao Domicilio</h1>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Editar Utente</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Apoio ao Domicilio</h1>
+    </div>
+    <div id="header">
+        <h2>Editar Utente</h2>
+    </div>
+    <form id="editForm" onsubmit="return verificar()" method="put">
+        <img src="foto"><br>
+        <br>
+        <label>Nome: </label>
+        <input type="text" name="nome" id="nome" onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
+        <br>
+        <label>Data de Nascimento: </label>
+        <input type="date" name="dataNascimento" id="dataNascimento"><br>
+        <br>
+        <label>Situação do utente: </label>
+        <input type="text" name="sitUtente" id="sitUtente"><br>
+        <br>
+        <label>Data de alteração Situação: </label>
+        <input type="date" name="dAlteraSit" id="dAlteraSit"><br>
+        <br>
+
+        <label id="labestciv" for="labEstCiv">Estado Civil:</label>
+        <select id="EstCiv" name="labEstCiv">
+            <option value="Por preencher">Por preencher</option>
+            <option value="Solteiro">Solteiro</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viuvo">Viuvo</option>
+            <option value="E complicado">E complicado</option>
+        </select><br>
+        <br>
+
+        <label>Nacionalidade: </label>
+        <input type="text" name="nacionalidade" id="nacionalidade"
+            onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
+        <br>
+        <label>Morada: </label>
+        <input type="text" name="morada" id="morada" maxlength="200"><br>
+        <br>
+        <label>Código postal: </label>
+        <input type="text" name="codigoPostal" id="codigoPostal"><br>
+        <br>
+        <label>Contacto: </label>
+        <input type="text" name="contacto" id="contacto"><br>
+        <br>
+        <label id="labconteme">Contacto Emergência: </label>
+        <input type="text" name="contacEmergencia" id="contacEmergencia"
+            onkeyup="this.value = this.value.replace(/[^0-9]/, '')" maxlength="9"><br>
+        <br>
+        <label>Notas: </label>
+        <input type="textarea" name="notas" id="notas"><br>
+        <br>
+        <button type="submit" id="cont">
+            Atualizar Utente
+        </button>
+        <button type="button" onclick="window.location.href='listaUtentes.html'">
+            Voltar
+        </button>
+    </form>
+
+    <!--        <div class="pop">
+            <span class="helper"></span>
+            <div>
+                <p>Editar Utente</p>
+                <label id="Lfoto"></label>
+                <label id="Lnome"></label>
+                <label id="LdataNascimento"></label>
+                <label id="LsitUten"></label>
+                <label id="LdataUt"></label>
+                <label id="Lestciv"></label>
+                <label id="Lnacio"></label>
+                <label id="Lmora"></label>
+                <label id="LcodP"></label>
+                <label id="Lcontacto"></label>
+                <label id="LcontaEmer"></label>
+                <label id="Lnotas"></label>
+                <button type="submit" onclick="window.location.href='listaUtentes.html'">Continuar</button>
+                <button id="volt" type="button" onclick="volt()">Voltar</button>
+            </div>
         </div>
-        <div id="header">
-            <h2>Editar Utente</h2>
+    -->
+
+    <div class="pop">
+        <span class="helper"></span>
+        <div>
+            <button onclick="window.location.href='listaUtentes.html'">Continuar</button>
         </div>
-        <form id="editForm" method="put">
-            <br>
-            <label>Nome: </label>
-            <input type="text" name="nome" id="nome"><br>
-            <br> 
-            <label>Data de Nascimento: </label>
-            <input type="date" name="dataNascimento" id="dataNascimento"><br>
-            <br>         
-            <label>Situação do utente: </label>
-            <input type="text" name="sitUtente" id="sitUtente"><br>
-            <br>
-            <label>Data de alteração Situação: </label>
-            <input type="date" name="dAlteraSit" id="dAlteraSit"><br>
-            <br>
-            <label>Estado Civil: </label>
-            <input type="text" name="estadoCivil" id="estadoCivil"><br>
-            <br>
-            <label>Nacionalidade: </label>
-            <input type="text" name="nacionalidade" id="nacionalidade"><br>
-            <br>
-            <label>Morada: </label>
-            <input type="text" name="morada" id="morada"><br>
-            <br>
-            <label>Código postal: </label>
-            <input type="text" name="codigoPostal" id="codigoPostal"><br>
-            <br>
-            <label>Contacto: </label>
-            <input type="text" name="contacto" id="contacto"><br>
-            <br>
-            <label>Contacto Emergência: </label>
-            <input type="text" name="contacEmergencia" id="contacEmergencia"><br>
-            <br>
-            <label>Notas: </label>
-            <input type="textarea" name="notas" id="notas"><br>
-            <br>
-            <button type="submit" onclick="window.location.href='listaUtentes.html'">
-                Atualizar Utente
-            </button>
-            <button type="button" onclick="window.location.href='listaUtentes.html'">
-                Voltar
-            </button>
-        </form>
-        <script src="js/jquery.js"></script>
-        <script src="cordova.js"></script>
-        <script src="js/editaUtente.js"></script>
-    </body>
+    </div>
+
+    <div class="telErrado">
+        <span class="helper"></span>
+        <div>
+            <p>Introduziu um número de telemovel errado</p>
+            <button id="voltt" type="button" onclick="voltt()">Voltar</button>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/editaUtente.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,5 @@
 var queryString = location.search.substring(1);
- 
+
 var a = queryString.split("=");
 
 var idUser = a[1]
@@ -7,30 +7,89 @@ var idUser = a[1]
 console.log(queryString)
 console.log(idUser)
 
-$("#editForm").ready(function (){
-     $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
-        
-         $("#nome").val(data.nome) 
-         $("#username").val(data.username) 
-         $("#tipoUtilizador").val(data.tipoUtilizador) 
-         $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
-         $("#telemovel").val(data.telemovel) 
-         $("#email").val(data.email)
+$("#editForm").ready(function () {
+  $.get("http://localhost:8080/api/users/" + idUser, function (data, status) {
 
-       });
+    $("#nome").val(data.nome)
+    $("#username").val(data.username)
+    $("#tipoUtilizador").val(data.tipoUtilizador)
+    $("#dataNascimento").val(data.dataNascimento.substring(0, 10))
+    $("#telemovel").val(data.telemovel)
+    $("#email").val(data.email)
+
+    nome1 = document.getElementById('nome').value;
+    username1 = document.getElementById('username').value;
+    tipoUtilizador1 = document.getElementById('tipoUtilizador').value;
+    dataNascimento1 = document.getElementById('dataNascimento').value;
+    telemovel1 = document.getElementById('telemovel').value;
+    email1 = document.getElementById('email').value;
+
   });
- 
+});
 
 
-    $("#editForm").submit(function (event){
-       event.preventDefault();
-       var formData = $(this).serialize();
-        $.ajax({
-            url: 'http://localhost:8080/api/users/'+idUser, 
-            type: 'PUT',
-            data: formData,
-            success: function(result) {
-              alert('Load was performed.');
-            }
-          });
-    });
+
+$("#editForm").submit(function (event) {
+  event.preventDefault();
+  var formData = $(this).serialize();
+  $.ajax({
+    url: 'http://localhost:8080/api/users/' + idUser,
+    type: 'PUT',
+    data: formData,
+    success: function (result) {
+      alert('Load was performed.');
+    }
+  });
+});
+
+
+function verificar() {
+
+  var nome2 = document.getElementById('nome').value;
+  var username2 = document.getElementById('username').value;
+  var tipoUtilizador2 = document.getElementById('tipoUtilizador').value;
+  var dataNascimento2 = document.getElementById('dataNascimento').value;
+  var telemovel2 = document.getElementById('telemovel').value;
+  var email2 = document.getElementById('email').value;
+
+  var telem1 = document.getElementById('telemovel').value.length
+  if (telem1 != 9) {
+    document.getElementById('labtel').style.color = "#FF1133";
+    $('.telErrado').show();
+    return false;
+  }
+
+  var telem2 = document.getElementById('telemovel').value.charAt(0);
+  if (telem2 != 9) {
+    document.getElementById('labtel').style.color = "#FF1133";
+    $('.telErrado').show();
+    return false;
+  }
+
+  $('.pop').show();
+
+  return true;
+  //$('.pop').show();
+  //$('#editForm').hide();
+
+  //document.getElementById('labtel').style.color = "#FFFFFF";
+  //document.getElementById('Lfoto').innerHTML =document.getElementById('foto').value + "<br />";
+  //document.getElementById('Lnome').innerHTML = "NOME: " + nome1 + "->" + nome2 + "<br />";
+  //document.getElementById('LnomeDeUtilizador').innerHTML = "NOME DE UTILIZADOR: " + username1 + "->" + username2 + "<br />";
+  //document.getElementById('LtipoUtilizador').innerHTML = "TIPO DE UTILIZADOR: " + tipoUtilizador1 + "->" + tipoUtilizador2 + "<br />";
+  //rever a data
+  //document.getElementById('LdataNascimento').innerHTML = "DATA DE NASCIMENTO: " + dataNascimento1 + "->" + dataNascimento2 + "<br />";
+  //document.getElementById('Ltelemovel').innerHTML = "TELEMOVEL: " + telemovel1 + "->" + telemovel2 + "<br />";
+  //document.getElementById('Lemail').innerHTML = "EMAIL: " + email1 + "->" + email2 + "<br />";
+
+};
+
+//function volt() {
+//  $('.pop').hide();
+//  $('#editForm').show();
+//};
+
+function voltt() {
+  $('.telErrado').hide();
+  $('#editForm').show();
+};

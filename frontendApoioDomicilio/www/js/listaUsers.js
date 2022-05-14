@@ -6,7 +6,7 @@
                 var row = `<tr>
                             <td>${data[i].nome}</td>
                             <td>${data[i].username}</td>
-                            <td>${data[i].dataNascimento.substring(0,10)}</td>
+                            <td>${data[i].dataNascimento}</td>
                             <td>${data[i].tipoUtilizador}</td>
                             <td>${data[i].telemovel}</td>
                             <td><a href="/detalheUser.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Detalhe</a></td>
