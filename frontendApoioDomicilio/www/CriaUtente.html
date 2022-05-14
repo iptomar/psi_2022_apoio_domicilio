@@ -1,19 +1,138 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Adicionar Utente</title>
-    </head>
-    <body>
-        <div id="header">
-            <h1>Apoio ao Domicilio</h1>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Adicionar Utente</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Apoio ao Domicilio</h1>
+    </div>
+    <div id="header">
+        <h2>Adicionar Utente</h2>
+    </div>
+    <form id="formulario" onsubmit="return verificar()" method="post" enctype="multipart/form-data">
+
+        <label id="labnome">Nome: </label>
+        <input type="text" name="nome" id="nome" onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
+        <br>
+
+        <label id="labnasc">Data de Nascimento: </label>
+        <input type="date" name="dataNascimento" id="dataNascimento"><br>
+        <br>
+
+        <label>Situação do utente: </label>
+        <select name="sitUtente" id="sitUtente">
+            <option value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+        </select><br>
+        <br>
+
+        <label>Data de alteração Situação: </label>
+        <input type="date" name="dAlteraSit" id="dAlteraSit"><br>
+        <br>
+
+        <label id="labestciv" for="labEstCiv">Estado Civil:</label>
+        <select id="EstCiv" name="labEstCiv">
+            <option value="Por preencher">Por preencher</option>
+            <option value="Solteiro">Solteiro</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viuvo">Viuvo</option>
+            <option value="E complicado">E complicado</option>
+        </select><br>
+        <br>
+
+        <label id="labnacio">Nacionalidade: </label>
+        <input type="text" name="nacionalidade" id="nacionalidade"
+            onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')"><br>
+        <br>
+
+        <label id="labmora">Morada: </label>
+        <input type="text" name="morada" id="morada" maxlength="200"><br>
+        <br>
+
+        <!-- Ver como fazer isto do codigo postal-->
+        <label id="labcod">Código postal: </label>
+        <input type="text" name="codigoPostal" id="codigoPostal"><br>
+        <br>
+
+        <label id="labcont">Contacto: </label>
+        <input type="text" name="contacto" id="contacto"><br>
+        <br>
+
+        <label id="labconteme">Contacto Emergência: </label>
+        <input type="text" name="contacEmergencia" id="contacEmergencia"
+            onkeyup="this.value = this.value.replace(/[^0-9]/, '')" maxlength="9"><br>
+        <br>
+
+        <label>Foto: </label>
+        <input type="file" name="image" placeholder="Select file" id="foto"><br>
+        <br>
+
+        <label>Notas: </label><br>
+
+        <textarea name="notas" id="notas" rows="5" cols="50"></textarea><br>
+        <br>
+
+        <button type="submit" id="cont">
+            Criar utente
+        </button>
+
+        <button type="button" onclick="window.location.href='listaUtentes.html'">
+            Voltar
+        </button>
+    </form>
+
+    <!--    <div class="pop">
+            <span class="helper"></span>
+            <div>
+                <p>Adicionou um utente</p>
+                <label id="Lnome"></label>
+                <label id="LdataNascimento"></label>
+                <label id="LsitUten"></label>
+                <label id="LdataUt"></label>
+                <label id="Lestciv"></label>
+                <label id="Lnacio"></label>
+                <label id="Lmora"></label>
+                <label id="LcodP"></label>
+                <label id="Lcontacto"></label>
+                <label id="LcontaEmer"></label>
+                <label id="Lfoto"></label>
+                <label id="Lnotas"></label>
+                <button id="cont" type="button" onclick="window.location.href='listaUtentes.html'">Continuar</button>
+                <button id="volt" type="button" onclick="volt()">Voltar</button>
+            </div>
         </div>
-        <div id="header">
-            <h2>Adicionar Utente</h2>
+-->
+
+    <div class="pop">
+        <span class="helper"></span>
+        <div>
+            <button onclick="window.location.href='listaUtentes.html'">Continuar</button>
         </div>
+    </div>
+
+    <div class="telErrado">
+        <span class="helper"></span>
+        <div>
+            <p>Introduziu um número de telemovel errado</p>
+            <button id="voltt" type="button" onclick="voltt()">Voltar</button>
+        </div>
+    </div>
+
+    <div class="DadosIncomp">
+        <span class="helper"></span>
+        <div>
+            <p>Por favor introduza toda a informação</p>
+            <button id="volta" type="button" onclick="volttt()">Voltar</button>
+        </div>
+<<<<<<< Updated upstream
         <form id="formulario" method="post" enctype="multipart/form-data">
 
             <label id="labnome">Nome: </label>
@@ -127,3 +246,13 @@
         <script src="js/criaUtente.js"></script>
     </body>
 </html>
+=======
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/criaUtente.js"></script>
+</body>
+
+</html>
+>>>>>>> Stashed changes

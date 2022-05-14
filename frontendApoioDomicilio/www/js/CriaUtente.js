@@ -26,9 +26,15 @@ window.onload= function() {
     document.querySelector('#dAlteraSit').value=(new Date()).toISOString().substr(0,10);
 }
 
+<<<<<<< Updated upstream
 var cont = document.querySelector('#cont')
 cont.addEventListener('click', function (e) {
     e.preventDefault();
+=======
+
+function verificar(){
+
+>>>>>>> Stashed changes
 
     //Codigo para ver se ha campos por preencher (campo da foto nao incluido)
     var contador = "0"
@@ -99,20 +105,29 @@ cont.addEventListener('click', function (e) {
 
     if(contador ==1){
         $('.DadosIncomp').show();
+<<<<<<< Updated upstream
         return;
+=======
+        return false;
+>>>>>>> Stashed changes
     }
 
     var conceme1 = document.getElementById('contacEmergencia').value.length
     if(conceme1 !=9){
         document.getElementById('labconteme').style.color = "#FF1133";
         $('.telErrado').show();
+<<<<<<< Updated upstream
         return;
+=======
+        return false;
+>>>>>>> Stashed changes
     }
     
     var conceme2 = document.getElementById('contacEmergencia').value.charAt(0);
     if(conceme2 != 9 ){
         document.getElementById('labconteme').style.color = "#FF1133";
         $('.telErrado').show();
+<<<<<<< Updated upstream
         return;
     }
     document.getElementById('labconteme').style.color = "#FFFFFF";
@@ -154,4 +169,48 @@ cont.addEventListener('click', function (e) {
         $('.DadosIncomp').hide();
         $('#formulario').show();
     });
+=======
+        return false;
+    }
+    document.getElementById('labconteme').style.color = "#FFFFFF";
+
+    $('.pop').show();
+    
+    return true;
+
+    //$('.pop').show();    
+    //$('#formulario').hide();     
+    //document.getElementById('Lnome').innerHTML =document.getElementById('nome').value + "<br />";
+    //document.getElementById('LdataNascimento').innerHTML =document.getElementById('dataNascimento').value + "<br />";
+    //document.getElementById('LsitUten').innerHTML =document.getElementById('sitUtente').value + "<br />";
+    //document.getElementById('LdataUt').innerHTML =document.getElementById('dAlteraSit').value + "<br />";
+    //document.getElementById('Lestciv').innerHTML =document.getElementById('EstCiv').value + "<br />";
+    //document.getElementById('Lnacio').innerHTML =document.getElementById('nacionalidade').value + "<br />";
+    //document.getElementById('Lmora').innerHTML =document.getElementById('morada').value + "<br />";
+    //document.getElementById('LcodP').innerHTML =document.getElementById('codigoPostal').value + "<br />";
+    //document.getElementById('Lcontacto').innerHTML =document.getElementById('contacto').value + "<br />";
+    //document.getElementById('LcontaEmer').innerHTML =document.getElementById('contacEmergencia').value + "<br />";
+    //document.getElementById('Lfoto').innerHTML =document.getElementById('foto').value + "<br />";
+    //document.getElementById('Lnotas').innerHTML =document.getElementById('notas').value + "<br />";
+
+    
+};
+
+
+//function volt() {
+//   $('.pop').hide();
+//    $('#formulario').show();
+//}
+
+function voltt() {
+    $('.telErrado').hide();
+    $('#formulario').show();
+}
+
+function volttt() {
+    $('.DadosIncomp').hide();
+    $('#formulario').show();
+}
+    
+>>>>>>> Stashed changes
 app.initialize();
