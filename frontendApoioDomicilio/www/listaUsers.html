@@ -5,6 +5,11 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+        <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
         <title>Lista de Utilizadores</title>
     </head>
     <body>
@@ -15,22 +20,12 @@
             <h2> Lista de Utilizadores </h2>
         </div>
         <body>
-            <table id='usersTable' border="1">
-                <thead>          
-                        <tr>
-                            <th>Nome</th>
-                            <th>Nome de utilizador</th>
-                            <th>Tipo de utilizador</th>
-                            <th>Data de nascimento</th>
-                            <th>Telemóvel</th>
-                            <th>Detalhe</th>
-                            <th>Editar</th>
-                            <th>Remover</th>
-                        </tr> 
-                </thead>
-                <tbody>                                           
-                </tbody>        
-            </table> 
+            
+            <div id="usersTable" class="row row-cols-1 row-cols-md-2 g-4">
+                
+              </div>
+
+
             <button id="addButton" type="button" onclick="window.location.href='CriaUser.html'">
                 Adicionar utilizador
                 </button>  

@@ -1,7 +1,7 @@
 function login(username,password) {
     //alert("username: " + user + "password: " + password);
 
-    $.get("http://localhost:8080/api/users/name/"+username, function(data){
+    $.get("http://10.10.192.239:8080/api/users/name/"+username, function(data){
 
         if(username == data.username && password == data.password){
             if( data.tipoUtilizador == 1){
