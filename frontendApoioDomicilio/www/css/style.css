@@ -144,6 +144,14 @@
 
    .card-img-top {
     width: 100%;
-    height: 35vw;
+    height: 50%;
+    object-fit: cover;
+} 
+
+/* listaUsers CSS */
+
+.detFotoUser {
+    width: 100%;
+    height: 50%;
     object-fit: cover;
 } 
