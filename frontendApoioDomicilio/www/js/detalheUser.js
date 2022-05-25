@@ -12,9 +12,6 @@ $("form#detForm").ready(function (){
         $("#dataNascimento").val(data.dataNascimento.substring(0,10)) 
         $("#telemovel").val(data.telemovel) 
         $("#email").val(data.email) 
-
-        alert("Foto: " + foto + " FotoAux: " + fotoAux);
-
       });
  });
 
@@ -26,3 +23,8 @@ $("form#detForm").ready(function (){
 
  console.log(queryString)
  console.log(idUser)
+
+ $("#editarUserRef").on('click', function() {
+
+  window.location = "/editaUser.html?id="+idUser;
+});
