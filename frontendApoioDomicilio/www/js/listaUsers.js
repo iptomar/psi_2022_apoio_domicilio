@@ -31,13 +31,4 @@
        
     })
 
-function remover(idUser){
-    $.ajax({
-        url: 'http://localhost:8080/api/users/'+idUser,
-        type: 'DELETE',
-        success: function(data) {
-          //play with data
-        }
-      });
-}
 

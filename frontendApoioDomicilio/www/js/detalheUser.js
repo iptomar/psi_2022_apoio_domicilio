@@ -28,3 +28,15 @@ $("form#detForm").ready(function (){
 
   window.location = "/editaUser.html?id="+idUser;
 });
+
+function remover(){
+  $.ajax({
+      url: 'http://localhost:8080/api/users/'+idUser,
+      type: 'DELETE',
+      success: function(data) {
+        //play with data
+      }
+    });
+
+    window.location = "listaUsers.html";
+}
