@@ -33,4 +33,16 @@ $("#detForm").ready(function (){
 
     window.location = "/editaUtente.html?id="+idUtente;
   });
- 
+
+  function remover(){
+    $.ajax({
+        url: 'http://localhost:8080/api/utentes/'+idUtente,
+        type: 'DELETE',
+        success: function(data) {
+          //play with data
+        }
+      });
+  
+      window.location = "listaUtentes.html";
+  }
+

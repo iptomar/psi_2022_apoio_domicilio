@@ -34,12 +34,3 @@
               
             
        
-    function remover(idUtente){
-        $.ajax({
-            url: "http://localhost:8080/api/utentes/"+idUtente,
-            type: "DELETE",
-            success: function(data) {
-              //play with data
-            }
-          });
-    }
