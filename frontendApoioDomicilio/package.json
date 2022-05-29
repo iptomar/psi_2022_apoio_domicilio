@@ -26,5 +26,10 @@
     "plugins": {
       "cordova-plugin-inappbrowser": {}
     }
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.8.2",
+    "mdb-ui-kit": "^4.0.0",
+    "mdbootstrap": "^4.20.0"
   }
 }

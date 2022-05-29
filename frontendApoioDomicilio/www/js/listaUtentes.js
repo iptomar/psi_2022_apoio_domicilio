@@ -2,30 +2,35 @@
     $("#utentesTable").ready(function (data){
 
         $.get( "http://localhost:8080/api/utentes/allUtentes", function( data ) {
-            for (var i = 0; i < data.length; i++) {
-                var row = `<tr>
-                            <td>${data[i].nome}</td>
-                            <td>${data[i].dataNascimento.substring(0,10)}</td>
-                            <td>${data[i].sitUtente}</td>
-                            <td>${data[i].codigoPostal}</td>
-                            <td>${data[i].contacto}</td>
-                            <td>${data[i].contacEmergencia}</td>
-                            <td><a href="/detalheUtente.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Detalhe</a></td>
-                            <td><a href="/editaUtente.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;">Editar</a></td>
-                            <td><a href="" onclick="remover(${data[i].id})">Remover</a></td>
-                        </tr>`
-                $("#utentesTable tbody").append(row)
-              }
-          });
+            
+              let fotoAux
+              for (var i = 0; i < data.length; i++) {
+                  fotoAux = data[i].foto.substring(7)
+                  var row = `<div class="col">
+                  <div class="card" style="width: 100%;">
+                  <a href="/detalheUtente.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;" class="btn btn-primary stretched-link">
+                    <img id="foto" src="http://localhost:8080/api/files/${fotoAux}" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">${data[i].nome}</h5>
+                      <p class="card-text">
+                      ${data[i].dataNascimento.substring(0,10)}
+                      </p>
+                      <p class="card-text">
+                      ${data[i].codigoPostal}
+                      </p>
+                      <p class="card-text">
+                      ${data[i].contacto}
+                      </p>
+                    </div>
+                  </div>
+        
+                </div>`
+                  $("#utentesTable").append(row)
+                }
+            }); 
+         
+      })
+              
+            
        
-    })
-       
-    function remover(idUtente){
-        $.ajax({
-            url: "http://localhost:8080/api/utentes/"+idUtente,
-            type: "DELETE",
-            success: function(data) {
-              //play with data
-            }
-          });
-    }

@@ -5,41 +5,56 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>Lista de Utilizadores</title>
     </head>
     <body>
-        <div id="header">
-            <h1>Apoio ao Domicilio</h1>
-        </div>
-        <div id="header">
-            <h2> Lista de Utilizadores </h2>
-        </div>
-        <body>
-            <table id='usersTable' border="1">
-                <thead>          
-                        <tr>
-                            <th>Nome</th>
-                            <th>Nome de utilizador</th>
-                            <th>Tipo de utilizador</th>
-                            <th>Data de nascimento</th>
-                            <th>Telemóvel</th>
-                            <th>Detalhe</th>
-                            <th>Editar</th>
-                            <th>Remover</th>
-                        </tr> 
-                </thead>
-                <tbody>                                           
-                </tbody>        
-            </table> 
-            <button id="addButton" type="button" onclick="window.location.href='CriaUser.html'">
-                Adicionar utilizador
-                </button>  
-            <button id="backButton" type="button" onclick="window.location.href='login.html'">
-                Voltar
-            </button>                            
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="color:white">
+                    <img src="\img\logo.jpg" alt="" width="40" height="30" class="d-inline-block align-text-top">
+                    MediCare
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/homeAutenticado.html" style="color:white">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/listaUtentes.html" style="color:white">Patients</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/listaMed.html" style="color:white">Meds</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/listaVisitas.html" style="color:white">Visits</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login.html" style="color:white">Logout</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-flex flex-row bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                  <a class="navbar-brand" href="/criaUser.html" style="color:white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                      </svg>
+                    </a>
+                </div>
+            </div>
+          </nav>
+            
+            <div id="usersTable" class="row row-cols-1 row-cols-md-1 g-4"></div>
+
+                            
         </body>           
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
         <script src="js/listaUsers.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body> 
 </html>
