@@ -38,19 +38,26 @@
                 style="border: 2px solid #ECECECFF;" value="2022-01-01">
                 <label for="dataNascimento">Data Nascimento</label>
             </div> 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nome" name="sitUtente" placeholder="Situação utente" style=" border: 2px solid #ECECECFF;">
-                <label for="sitUtente">Situação utente</label>
-            </div>           
+            <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example"
+            style="border: 2px solid #ECECECFF;">
+                <option selected>Situação do utente</option>
+                <option value="1">Ativo</option>
+                <option value="2">Inativo</option>
+              </select>      
             <div class="form-floating mb-3">
                 <input type="date" class="form-control" id="dAlteraSit" name="dAlteraSit" placeholder="Data alteração situação"
                 style="border: 2px solid #ECECECFF;" value="2022-01-01">
                 <label for="dAlteraSit">Data alteração situação</label>
-            </div>  
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="estadoCivil" name="estadoCivil" placeholder="Estado civil" style=" border: 2px solid #ECECECFF;">
-                <label for="estadoCivil">Estado civil</label>
             </div> 
+            <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example"
+            style="border: 2px solid #ECECECFF;">
+                <option selected>Tipo de utilizador</option>
+                <option value="1">Solteiro(a)</option>
+                <option value="2">Casado(a)</option>
+                <option value="3">Divorciado(a)</option>
+                <option value="4">União de Facto</option>
+                <option value="5">Viúvo(a)</option>
+              </select> 
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" placeholder="Nacionalidade" style=" border: 2px solid #ECECECFF;">
                 <label for="nacionalidade">Nacionalidade</label>
@@ -64,7 +71,7 @@
                 <label for="codigoPostal">Código Postal</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="contacto" name="contacto" placeholder="Contacto" style=" border: 2px solid #ECECECFF;">
+                <input type="text" class="form-control" id="contacto" name="contacto" placeholder="contacto" style=" border: 2px solid #ECECECFF;">
                 <label for="contacto">Contacto</label>
             </div>   
             <div class="form-floating mb-3">

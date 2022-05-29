@@ -41,20 +41,27 @@
                 style="border: 2px solid #ECECECFF;" value="2022-01-01">
             </div>    
             <label>Situação do utente: </label>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="sitUtente" name="sitUtente" placeholder="sitUtente"
-                style="border: 2px solid #ECECECFF;">
-            </div>    
+            <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example"
+            style="border: 2px solid #ECECECFF;">
+                <option selected>Tipo de utilizador</option>
+                <option value="1">Ativo</option>
+                <option value="2">Inativo</option>
+              </select>   
             <label>Data de alteração Situação: </label>
             <div class="form-floating mb-3">
                  <input type="date"class="form-control" name="dAlteraSit" id="dAlteraSit" placeholder="dAlteraSit"  
                     style="border: 2px solid #ECECECFF;">
             </div>
             <label>Estado Civil: </label>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="estadoCivil" id="estadoCivil" placeholder="estadoCivil"
-                style="border: 2px solid #ECECECFF;">
-            </div>
+            <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example"
+            style="border: 2px solid #ECECECFF;">
+                <option selected>Tipo de utilizador</option>
+                <option value="1">Solteiro(a)</option>
+                <option value="2">Casado(a)</option>
+                <option value="3">Divorciado(a)</option>
+                <option value="4">União de Facto</option>
+                <option value="5">Viúvo(a)</option>
+              </select>  
             <label>Nacionalidade: </label>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control"  name="nacionalidade" id="nacionalidade" placeholder="nacionalidade"
