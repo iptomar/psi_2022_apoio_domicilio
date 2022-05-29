@@ -135,6 +135,11 @@
     font-size: 1.2em;
     width: 170px;
     text-align: center;
+    color:white
+}
+
+.navbar-toggler.toggler-example{
+  text-decoration-color: white;
 }
 
 .fa-1x {
@@ -144,7 +149,7 @@
     cursor: pointer;
   }
   .dark-blue-text {
-    color: #0A38F5;
+    color: #738ef8;
   }
   .dark-pink-text {
     color: #AC003A;
@@ -158,28 +163,34 @@
 
    .card-img-top {
     width: 100%;
-    max-width: 500px;
+    max-width: fit-content;
     height: 50%;
-    max-height: auto;
+    max-height: fit-content;
     object-fit: cover;
 } 
+
+#adicionar button{
+  background-color:rgb(75, 146, 252);
+  border: 2px solid #ECECECFF; 
+  color: #fefcfc;
+}
 
 /* listaUsers CSS */
 
 .detFotoUser {
   width: 100%;
-  max-width: 500px;
+  max-width: fit-content;
   height: 50%;
-  max-height: auto;
+  max-height: fit-content;
   object-fit: cover;
   padding:  15px 20px 20px 25px;
 } 
 
 .detFotoUtente {
   width: 100%;
-  max-width: 500px;
+  max-width:fit-content;
   height: 50%;
-  max-height: auto;
+  max-height: fit-content ;
   object-fit: cover;
   padding:  15px 20px 20px 25px;
 } 
@@ -191,27 +202,27 @@
     text-align: center;
 }
 
- input[type=file]::file-selector-button {
+/*  input[type=file]::file-selector-button {
     border: 2px solid #ECECECFF;
     padding: .2em .4em;
     border-radius: .2em;
-    background-color: #0d6efdFF;;
+    background-color:rgb(75, 146, 252);
     transition: 1s;
     color: #000000;
-  }
+  } */
   
-  input[type=file]::file-selector-button:hover {
-    background-color: #0d6efd55;
+  /* input[type=file]::file-selector-button:hover {
+    background-color: rgb(75, 146, 252);
     border: 2px solid #ECECECFF;
     color: #000000;
     cursor: pointer;
-  } 
+  }  */
 
 .btn button[type=submit]:hover{
     background: #00000000;
 }
 
-$primary: rgb(75, 162, 255);
+.primary{ rgb(75, 146, 252)};
 .fab-container {
   display: flex;
   flex-direction: column;
@@ -241,7 +252,7 @@ $primary: rgb(75, 162, 255);
   .fab {
     position: relative;
     height: 70px; width: 70px;
-    background-color: $primary;
+    background-color: primary;
     border-radius: 50%;
     z-index: 2;
     &::before {
@@ -284,6 +295,10 @@ $primary: rgb(75, 162, 255);
 }
 
 
+#file-chosen{
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+}
 
 
 

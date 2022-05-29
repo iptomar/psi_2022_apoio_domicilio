@@ -16,6 +16,9 @@
                     ${data[i].username}
                     </p>
                     <p class="card-text">
+                    ${data[i].tipoUtilizador}
+                    </p>
+                    <p class="card-text">
                     ${data[i].email}
                     </p>
                     <p class="card-text">
