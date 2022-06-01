@@ -21,54 +21,84 @@
     padding-top: 20px;
 }
 
-#formulario {
-    padding-top: 10px;
-    height: 1.5em;
-    margin-left: 20px; 
-    margin-right: 20px;  
-    text-align: left; 
+#criaForm {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 1.5em;
+  margin-left: 20px; 
+  margin-right: 20px;
+  text-align: center; 
 }
 
-#formulario label {
-    font-size: 1.2em;
-    text-align: left;
+#criaForm label {
+    font-size: 1.5em;
+    text-align: center;
     
 }
 
-#formulario button {
-    font-size: 1.2em;
-    width: 170px;
-    text-align: center;
+#criaForm select{
+  border: 2px solid rgb(140, 218, 249);
+  text-align: center;
+}
+
+#criaForm input{
+  border: 2px solid rgb(140, 218, 249);
+  text-align: center;
+}
+
+#criaForm button {
+  font-size: 1.5em;
+  width: 200px;
+  text-align: center;
+  color: white;
+  border-color: rgb(75, 146, 252);
+  background-color: rgb(75, 146, 252); 
+  align-self:auto;
 }
 
 #detForm {
   height: 1.5em;
   margin-left: 20px; 
   margin-right: 20px;
-  text-align: left; 
+  border-color: rgb(75, 146, 252);
+  text-align: center; 
 }
 
 #detForm label {
-  font-size: 1.2em;
-  text-align: left;
-  
+  font-size: 1.5em;
+  text-align: center; 
+}
+
+#detForm select{
+  text-align: center;
+}
+
+#detForm input{
+  text-align: center;
 }
 
 #formLogin {
     padding-top: 40px;
+    height: 1.5em;
+    margin-left: 20px; 
+    margin-right: 20px; 
+    border-color: rgb(75, 146, 252); 
     text-align: center;
 }
 
-#formLogin label {
-    font-size: 1.2em;
-    
-}
 
 #formLogin button {
     font-size: 1.5em;
     width: 200px;
     text-align: center;
+    color: white;
+    border-color: rgb(75, 146, 252);
+    background-color: rgb(75, 146, 252); 
+    align-self:auto;
+    
 }
+
+
 
 #index button {
     font-size: 1.2em;
@@ -78,7 +108,21 @@
 
 #usersTable {
     font-size: 1.2em;
+    text-align: center;
+    background-color:rgb(75, 146, 252) ;
     
+}
+
+#utentesTable{
+  font-size: 1.2em;
+    text-align: center;
+    background-color:rgb(75, 146, 252) ;
+}
+
+#medTable{
+  font-size: 1.2em;
+    text-align: center;
+    background-color:rgb(75, 146, 252) ;
 }
 
 #addButton {
@@ -88,41 +132,40 @@
 
 }
 
-#detForm {
-    padding-top: 10px;
-    height: 1.5em;
-    padding-left: 10px;  
-    text-align: center; 
-}
-
-#detForm label {
-    font-size: 1.2em;
-    
-}
-
-#detForm button {
-    font-size: 1.2em;
-    width: 170px;
-    text-align: center;
-}
 
 #editForm {
     padding-top: 10px;
     height: 1.5em;
     padding-left: 10px;  
-    text-align: center; 
+    text-align: center;    
+}
+
+#editForm select{
+  border: 2px solid rgb(140, 218, 249);
+  text-align: center;
 }
 
 #editForm label {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    text-align: center;
     
 }
 
-#editForm button {
-    font-size: 1.2em;
-    width: 170px;
-    text-align: center;
+#editForm input{
+  text-align: center;
+  border: 2px solid rgb(140, 218, 249);
 }
+
+#editForm button {
+  font-size: 1.5em;
+  width: 200px;
+  text-align: center;
+  color: white;
+  border-color: rgb(75, 146, 252);
+  background-color: rgb(75, 146, 252); 
+    
+}
+
 #detFoto{
     padding-top: 10px;
     height:auto;
@@ -138,35 +181,38 @@
     color:white
 }
 
-.navbar-toggler.toggler-example{
-  text-decoration-color: white;
-}
+
 
 .fa-1x {
     font-size: 1.5rem;
-  }
-  .navbar-toggler.toggler-example {
-    cursor: pointer;
-  }
-  .dark-blue-text {
-    color: #738ef8;
-  }
-  .dark-pink-text {
-    color: #AC003A;
-  }
-  .dark-amber-text {
-    color: #ff6f00;
-  }
-  .dark-teal-text {
-    color: #004d40;
-  }
+}
+.navbar-toggler.toggler-example {
+  cursor: pointer;
+}
 
-   .card-img-top {
+.navbar-dark .navbar-toggler-icon{
+  color: white;
+  border-color: white;
+}
+.dark-blue-text {
+  color: #738ef8;
+}
+.dark-pink-text {
+  color: #AC003A;
+}
+.dark-amber-text {
+  color: #ff6f00;
+}
+.dark-teal-text {
+  color: #004d40;
+}
+
+.card-img-top {
     width: 100%;
     max-width: fit-content;
     height: 50%;
-    max-height: fit-content;
-    object-fit: cover;
+    max-height:fit-content;
+    object-fit:contain;
 } 
 
 #adicionar button{
@@ -218,87 +264,17 @@
     cursor: pointer;
   }  */
 
-.btn button[type=submit]:hover{
-    background: #00000000;
+/* .btn button[type=submit]:hover{
+    background: rgb(75, 146, 252);
+    al
+
+} */
+
+#button{
+  border:(2px solid  rgb(140, 218, 249));
+  background-color: rgb(75, 146, 252); 
 }
 
-.primary{ rgb(75, 146, 252)};
-.fab-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  user-select: none;
-  position: absolute;
-  bottom: 30px; right: 30px;
-  &:hover {
-    height: 100%;
-    .sub-button:nth-child(2) {
-        transform: translateY(-80px);
-    }
-    .sub-button:nth-child(3) {
-        transform: translateY(-140px);
-    }
-    .sub-button:nth-child(4) {
-        transform: translateY(-200px);
-    }
-    .sub-button:nth-child(5) {
-        transform: translateY(-260px);
-    }
-    .sub-button:nth-child(6) {
-        transform: translateY(-320px);
-    }
-  }
-  .fab {
-    position: relative;
-    height: 70px; width: 70px;
-    background-color: primary;
-    border-radius: 50%;
-    z-index: 2;
-    &::before {
-      content: " ";
-      position: absolute;
-      bottom: 0; right: 0;
-      height: 35px; width: 35px;
-      background-color: inherit;
-      border-radius: 0 0 10px 0;
-      z-index: -1;
-    }
-    .fab-content {
-      display: flex;
-      align-items: center; justify-content: center;
-      height: 100%; width: 100%;
-      border-radius: 50%;
-      .material-icons {
-        color: white;
-        font-size: 48px;
-      }
-    }
-  }
-  .sub-button {
-    position: absolute;
-    display: flex;
-    align-items: center; justify-content: center;
-    bottom: 10px; right: 10px;
-    height: 50px; width: 50px;
-    background-color: $primary;
-    border-radius: 50%;
-    transition: all .3s ease;
-    &:hover {
-      cursor: pointer;
-    }
-    .material-icons {
-      color: white;
-      padding-top: 6px;
-    }
-  }
-}
-
-
-#file-chosen{
-  margin-left: 0.3rem;
-  font-family: sans-serif;
-}
 
 
 

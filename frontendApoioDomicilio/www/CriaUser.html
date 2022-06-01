@@ -28,50 +28,38 @@
             </div>
 
           </nav>
-        <form id="formulario" class="row g-3" method="post" enctype="multipart/form-data">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" style=" border: 2px solid #ECECECFF;">
-                <label for="nome">Nome</label>
+        <form id="criaForm" class="row g-3" method="post" enctype="multipart/form-data">
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" >
             </div>         
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username" style="
-                 border: 2px solid #ECECECFF;">
-                <label for="username">Username</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" >
             </div>   
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="password" name="password" placeholder="Password" style="
-                 border: 2px solid #ECECECFF;">
-                <label for="password">Password</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="password" name="password" placeholder="Password" >
             </div>
-            <select class="form-select form-select-sm" name="tipoUtilizador" id="tipoUtilizador" aria-label=".form-select-sm example"
-            style="border: 2px solid #ECECECFF;">
+            <select class="form-select form-select-sm" name="tipoUtilizador" id="tipoUtilizador" aria-label=".form-select-sm example">
                 <option selected>Tipo de utilizador</option>
                 <option value="1">Gestor</option>
                 <option value="2">Administrativo</option>
                 <option value="3">Enfermeiro</option>
               </select>
-             <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="dataNascimento"
-                style="border: 2px solid #ECECECFF;" value="2022-01-01">
-                <label for="dataNascimento">Data Nascimento</label>
+             <div class=" mb-3">
+                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento">
             </div>  
             <div class="custom-file mt-3 mb-3">
                 <input type="file" class="custom-file-input" id="costumFile" name="image" >             
             </div> 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="telemovel" name="telemovel" placeholder="telemovel"
-                style=" border: 2px solid #ECECECFF;">
-                <label for="telemovel">Telemóvel</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="telemovel" name="telemovel" placeholder="Telemóvel">
             </div>   
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" aria-describedby="emailHelp"
-                style="border: 2px solid #ECECECFF;">
-                <label for="email">Email address</label>
+            <div class=" mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email: name@example.com" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your personal data with anyone else.</div>
             </div>
             <div class="col-12">
-                <button id="adicionar" type="submit" class="btn btn-primary" onclick="window.location.href='listaUsers.html'">Adicionar</button>
-              </div>
+                <button id="adicionar" type="submit" class="btn btn-info" onclick="window.location.href='listaUsers.html'">Adicionar</button>
+            </div>
         </form>
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>

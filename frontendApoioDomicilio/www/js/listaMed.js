@@ -5,7 +5,7 @@
             for (var i = 0; i < data.length; i++) {
               var row = `<div class="col">
                   <div class="card" style="width: 100%;">
-                  <a href="/editaMed.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;" class="btn btn-primary stretched-link"></a>
+                  <a href="/editaMed.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;" class="btn btn-primary stretched-link"style="background-color:rgb(75, 146, 252);" ></a>
                     <div class="card-body">
                       <h5 class="card-title">${data[i].nome}</h5>
                       <p class="card-text">

@@ -28,67 +28,53 @@
             </div>
 
           </nav>
-        <form id="formulario" method="post" enctype="multipart/form-data">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" style=" border: 2px solid #ECECECFF;">
-                <label for="nome">Nome</label>
+        <form id="criaForm" class="row g-3" method="post" enctype="multipart/form-data">
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
             </div>         
-            <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data Nascimento"
-                style="border: 2px solid #ECECECFF;" value="2022-01-01">
-                <label for="dataNascimento">Data Nascimento</label>
+            <div class=" mb-3">
+                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data Nascimento" value="2022-01-01">
             </div> 
-            <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example"
-            style="border: 2px solid #ECECECFF;">
+            <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example">
                 <option selected>Situação do utente</option>
                 <option value="1">Ativo</option>
                 <option value="2">Inativo</option>
               </select>      
-            <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="dAlteraSit" name="dAlteraSit" placeholder="Data alteração situação"
-                style="border: 2px solid #ECECECFF;" value="2022-01-01">
-                <label for="dAlteraSit">Data alteração situação</label>
+            <div class=" mb-3">
+                <input type="date" class="form-control" id="dAlteraSit" name="dAlteraSit" placeholder="Data alteração situação" value="2022-01-01">                
             </div> 
-            <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example"
-            style="border: 2px solid #ECECECFF;">
-                <option selected>Tipo de utilizador</option>
+            <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example">
+                <option selected>Estado Civil</option>
                 <option value="1">Solteiro(a)</option>
                 <option value="2">Casado(a)</option>
                 <option value="3">Divorciado(a)</option>
                 <option value="4">União de Facto</option>
                 <option value="5">Viúvo(a)</option>
               </select> 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" placeholder="Nacionalidade" style=" border: 2px solid #ECECECFF;">
-                <label for="nacionalidade">Nacionalidade</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" placeholder="Nacionalidade">
             </div> 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="morada" name="morada" placeholder="Morada" style=" border: 2px solid #ECECECFF;">
-                <label for="morada">Morada</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="morada" name="morada" placeholder="Morada">
             </div>                 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="Código Postal" style=" border: 2px solid #ECECECFF;">
-                <label for="codigoPostal">Código Postal</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="Código Postal">
             </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="contacto" name="contacto" placeholder="contacto" style=" border: 2px solid #ECECECFF;">
-                <label for="contacto">Contacto</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="contacto" name="contacto" placeholder="contacto">
             </div>   
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="contacEmergencia" name="contacEmergencia" placeholder="Contacto de emergência" style=" border: 2px solid #ECECECFF;">
-                <label for="contacEmergencia">Contacto de emergência</label>
+            <div class=" mb-3">
+                <input type="text" class="form-control" id="contacEmergencia" name="contacEmergencia" placeholder="Contacto de emergência">
             </div>                 
             <div class="custom-file">
-                <input type="file" class="custom-file-input" id="foto" name="image" >
-                <label class="custom-file-label" for="customFile">Escolher foto</label>
+                <input type="file" class="custom-file-input" id="costumFile" name="image" >   
             </div> 
-            <div class="form-floating mb-3">
-                <input type="textarea " class="form-control" id="notas" name="notas" placeholder="Notas" style=" border: 2px solid #ECECECFF;">
-                <label for="notas">Notas</label>
+            <div class=" mb-3">
+                <input type="textarea " class="form-control" id="notas" name="notas" placeholder="Notas">
             </div>         
             
             <div class="col-12">
-                <button id="adicionar" type="submit" class="btn btn-primary" onclick="window.location.href='listaUtentes.html'">Adicionar</button>
+                <button id="adicionar" type="submit" class="btn btn-info" onclick="window.location.href='listaUtentes.html'">Adicionar</button>
             </div>
        
         </form>

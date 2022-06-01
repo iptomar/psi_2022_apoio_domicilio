@@ -9,16 +9,16 @@
       <title>Login</title>
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(75, 146, 252);">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="color:white">
                 <img src="\img\logo.jpg" alt="" width="40" height="30" class="d-inline-block align-text-top">
                 MediCare
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button"  style="color:white" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" style="color:white"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color:white">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="/home.html" style="color:white">Home</a>
@@ -34,20 +34,20 @@
         </div>
       </nav>
    
-        <form id="formLogin">
-             
-              <label>Utilizador</label>
-              <input id="username" name="username" type="text" />
-              <br><br>
-         
-              <label>Password</label>
-              <input id="password" name="password" type="password" />
-              <br><br><br>
-          
-              <button class="botaologin" type="button" onclick="login(document.getElementById('username')
-                            .value,document.getElementById('password').value)">Entrar</button>
-
-              <button type="button" onclick="window.location.href='listaUsers.html'">Entrar</button><br><br><br>
+        <form id="formLogin" class="row g-1">
+             <div class=" mb-1">  
+              <input id="username" class="form-control" name="username" type="text"  placeholder="Username"/>
+             </div>
+             <div class=" mb-3">  
+              <input id="password" class="form-control" name="password" type="password"  placeholder="Password" />
+             </div>
+             <div class="col-12">
+              <button class="btn btn-primary" type="button" onclick="login(document.getElementById('username')
+                            .value,document.getElementById('password').value)" >Entrar</button>
+             </div>
+             <div class="col-12">
+              <button class="btn btn-info" type="button" onclick="window.location.href='listaUsers.html'">Entrar</button>
+              </div>
               
         </form>  
         <script src="js/jquery.js"></script>
