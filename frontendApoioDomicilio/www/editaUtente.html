@@ -31,30 +31,25 @@
 
           <form id="editForm" class="row g-3" method="put">
             <label for="nome">Nome</label>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome"  style="
-                 border: 2px solid #ECECECFF;">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" >
             </div>         
             <label>Data de Nascimento: </label>
-            <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="dataNascimento"
-                style="border: 2px solid #ECECECFF;" value="2022-01-01">
+            <div class="mb-3">
+                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="dataNascimento" value="2022-01-01">
             </div>    
             <label>Situação do utente: </label>
-            <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example"
-            style="border: 2px solid #ECECECFF;">
+            <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example">
                 <option selected>Tipo de utilizador</option>
                 <option value="1">Ativo</option>
                 <option value="2">Inativo</option>
               </select>   
             <label>Data de alteração Situação: </label>
-            <div class="form-floating mb-3">
-                 <input type="date"class="form-control" name="dAlteraSit" id="dAlteraSit" placeholder="dAlteraSit"  
-                    style="border: 2px solid #ECECECFF;">
+            <div class="mb-3">
+                 <input type="date"class="form-control" name="dAlteraSit" id="dAlteraSit" placeholder="dAlteraSit"  >
             </div>
             <label>Estado Civil: </label>
-            <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example"
-            style="border: 2px solid #ECECECFF;">
+            <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example">
                 <option selected>Tipo de utilizador</option>
                 <option value="1">Solteiro(a)</option>
                 <option value="2">Casado(a)</option>
@@ -63,38 +58,32 @@
                 <option value="5">Viúvo(a)</option>
               </select>  
             <label>Nacionalidade: </label>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control"  name="nacionalidade" id="nacionalidade" placeholder="nacionalidade"
-                style="border: 2px solid #ECECECFF;">
+            <div class="mb-3">
+                <input type="text" class="form-control"  name="nacionalidade" id="nacionalidade" placeholder="nacionalidade">
             </div>
             <label>Morada: </label>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="morada" id="morada" placeholder="morada"
-                style="border: 2px solid #ECECECFF;">
+            <div class=" mb-3">
+                <input type="text" class="form-control" name="morada" id="morada" placeholder="morada">
             </div>
             <label>Código postal: </label>
-            <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" placeholder="codigoPostal"
-            style="border: 2px solid #ECECECFF;">
+            <div class="mb-3">
+            <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" placeholder="codigoPostal">
             </div>
             <label>Contacto: </label>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="contacto" id="contacto" placeholder="contacto"
-                style="border: 2px solid #ECECECFF;">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="contacto" id="contacto" placeholder="contacto">
             </div>
             <label>Contacto Emergência: </label>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" name="contacEmergencia" id="contacEmergencia" placeholder="contacEmergencia"
-                style="border: 2px solid #ECECECFF;">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="contacEmergencia" id="contacEmergencia" placeholder="contacEmergencia">
             </div>
             <label>Notas: </label>
-            <div class="form-floating mb-3">
-                <input type="textarea" class="form-control"  name="notas" id="notas" placeholder="notas"
-                style="border: 2px solid #ECECECFF;">
+            <div class="mb-3">
+                <input type="textarea" class="form-control"  name="notas" id="notas" placeholder="notas">
             </div>
-            <button type="submit" onclick="window.location.href='listaUtentes.html'">
-                Atualizar Utente
-            </button>
+            <div class="col-12">
+                <button type="submit" class="btn btn-info" onclick="window.location.href='listaUtentes.html'">Atualizar</button> 
+            </div>
         </form>
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>

@@ -7,7 +7,7 @@
                 fotoAux = data[i].foto.substring(7)
                 var row = `<div class="col">
                 <div class="card" style="width: 100%;">
-                <a href="/detalheUser.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;" class="btn btn-primary stretched-link">
+                <a href="/detalheUser.html" onclick="location.href=this.href+'?id='+${data[i].id};return false;" class="btn btn-primary stretched-link" style="background-color:rgb(75, 146, 252);">
                   <img id="foto" src="http://localhost:8080/api/files/${fotoAux}" class="card-img-top" alt="Hollywood Sign on The Hill"/>
                   </a>
                   <div class="card-body">

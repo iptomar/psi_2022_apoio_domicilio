@@ -53,28 +53,33 @@
                 </div>
             </div>
           
-        <form id="editForm" method="put">
-            <label>Nome: </label>
-            <input type="text" name="nome" id="nome"><br>
-            <br>          
-            <label>Farmacêutica: </label>
-            <input type="text" name="farmaceutica" id="farmaceutica"><br>
-            <br>
-            <label>Principio activo: </label>
-            <input type="text" name="principio" id="principio"><br>
-            <br>
-            <label>Dosagem: </label>
-            <input type="text" name="dosagem" id="dosagem"><br>
-            <br>
-            <label>Formato: </label>
-            <input type="text" name="formato" id="formato"><br>
-            <br>
+        <form id="editForm" class="row g-3" method="put">
+          <label>Nome: </label>
+          <div class="mb-3">
+            <input type="text" class="form-control" name="nome" id="nome">
+          </div>  
+          <label>Farmacêutica: </label>
+          <div class="mb-3">    
+            <input type="text" class="form-control" name="farmaceutica" id="farmaceutica">
+          </div>  
+          <label>Principio activo: </label>
+          <div class="mb-3">
+            <input type="text" class="form-control" name="principio" id="principio">
+          </div>  
+          <label>Dosagem: </label>
+          <div class="mb-3">  
+            <input type="text" class="form-control" name="dosagem" id="dosagem">
+          </div>
+          <label>Formato: </label>
+          <div class="mb-3">           
+            <input type="text" class="form-control" name="formato" id="formato">
+          </div>
             <!-- <label>Stock: </label>
             <input type="text" name="stock" id="stock"><br>
             <br> -->
-            <button type="submit"  onclick="window.location.href='listaMed.html'">
-               Atualizar
-            </button>
+            <div class="col-12">
+              <button type="submit" class="btn btn-info" onclick="window.location.href='listaMed.html'">Atualizar</button> 
+              </div>
         </form>
         <script src="js/jquery.js"></script>
         <script src="cordova.js"></script>
