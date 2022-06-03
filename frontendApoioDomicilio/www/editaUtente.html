@@ -6,10 +6,17 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/style.css">
+<<<<<<< Updated upstream
+=======
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+>>>>>>> Stashed changes
     <title>Editar Utente</title>
 </head>
 
 <body>
+<<<<<<< Updated upstream
     <div id="header">
         <h1>Apoio ao Domicilio</h1>
     </div>
@@ -199,6 +206,118 @@
     <script src="js/jquery.js"></script>
     <script src="cordova.js"></script>
     <script src="js/editaUtente.js"></script>
+</body>
+
+>>>>>>> Stashed changes
+=======
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color:white">
+                <img src="\img\logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                MediCare
+            </a>
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                    <a class="navbar-brand" href="/listaUtentes.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-arrow-left-circle-fill d-inline-block align-text-top" viewBox="0 0 16 16"
+                            style="color:white">
+                            <path
+                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <form id="editForm" class="row g-3" method="put">
+
+        <label for="nome">Nome</label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" style="
+                 border: 2px solid #ECECECFF;">
+        </div>
+
+        <label>Data de Nascimento: </label>
+        <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"
+                placeholder="dataNascimento" style="border: 2px solid #ECECECFF;" value="2022-01-01">
+        </div>
+
+        <label>Situação do utente: </label>
+        <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example"
+            style="border: 2px solid #ECECECFF;">
+            <option selected>Tipo de utilizador</option>
+            <option value="1">Ativo</option>
+            <option value="2">Inativo</option>
+        </select>
+
+        <label>Data de alteração Situação: </label>
+        <div class="form-floating mb-3">
+            <input type="date" class="form-control" name="dAlteraSit" id="dAlteraSit" placeholder="dAlteraSit"
+                style="border: 2px solid #ECECECFF;">
+        </div>
+
+        <label>Estado Civil: </label>
+        <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil"
+            aria-label=".form-select-sm example" style="border: 2px solid #ECECECFF;">
+            <option selected>Tipo de utilizador</option>
+            <option value="1">Solteiro(a)</option>
+            <option value="2">Casado(a)</option>
+            <option value="3">Divorciado(a)</option>
+            <option value="4">União de Facto</option>
+            <option value="5">Viúvo(a)</option>
+        </select>
+
+        <label>Nacionalidade: </label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="nacionalidade" id="nacionalidade" placeholder="nacionalidade"
+                style="border: 2px solid #ECECECFF;">
+        </div>
+
+        <label>Morada: </label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="morada" id="morada" placeholder="morada"
+                style="border: 2px solid #ECECECFF;">
+        </div>
+
+        <label>Código postal: </label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" placeholder="codigoPostal"
+                style="border: 2px solid #ECECECFF;">
+        </div>
+
+        <label>Contacto: </label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="contacto" id="contacto" placeholder="contacto"
+                style="border: 2px solid #ECECECFF;">
+        </div>
+
+        <label>Contacto Emergência: </label>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="contacEmergencia" id="contacEmergencia"
+                placeholder="contacEmergencia" style="border: 2px solid #ECECECFF;">
+        </div>
+
+        <label>Notas: </label>
+        <div class="form-floating mb-3">
+            <input type="textarea" class="form-control" name="notas" id="notas" placeholder="notas"
+                style="border: 2px solid #ECECECFF;">
+        </div>
+
+        <button type="submit" onclick="window.location.href='listaUtentes.html'">
+            Atualizar Utente
+        </button>
+
+    </form>
+    
+    <script src="js/jquery.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/editaUtente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 >>>>>>> Stashed changes

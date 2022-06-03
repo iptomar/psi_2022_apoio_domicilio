@@ -23,6 +23,7 @@ onDeviceReady: function(){
     }
 };
 
+<<<<<<< Updated upstream
 
 var cont = document.querySelector('#cont')
 cont.addEventListener('click', function (e) {
@@ -83,10 +84,29 @@ function verificar() {
         contador = "1";
     } else {
 >>>>>>> Stashed changes
+=======
+function verificar() {
+    var verif = 0;
+
+    var nomed = document.getElementById('nome').value.length
+    if (nomed == 0) {
+        document.getElementById('labnome').style.color = "#FF1133";
+        verif = "1";
+    } else {
+        document.getElementById('labnome').style.color = "#FFFFFF";
+    }
+    
+    var userna = document.getElementById('username').value.length
+    if (userna == 0) {
+        document.getElementById('labusername').style.color = "#FF1133";
+        verif = "1";
+    } else {
+>>>>>>> Stashed changes
         document.getElementById('labusername').style.color = "#FFFFFF";
     }
 
     var passw = document.getElementById('password').value.length
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     if(passw == 0){
         document.getElementById('labpass').style.color = "#FF1133";
@@ -128,10 +148,33 @@ function verificar() {
         contador = "1";
     } else {
 >>>>>>> Stashed changes
+=======
+    if (passw == 0) {
+        document.getElementById('labpass').style.color = "#FF1133";
+        verif = "1";
+    } else {
+        document.getElementById('labpass').style.color = "#FFFFFF";
+    }
+
+    //var tipuser = document.getElementById('tipoUtilizador').value.length
+    //if (tipuser == 0) {
+    //    document.getElementById('labtipo').style.color = "#FF1133";
+    //    verif = "1";
+    //} else {
+    //    document.getElementById('labtipo').style.color = "#FFFFFF";
+    //}
+
+    var datan = document.getElementById('dataNascimento').value.length
+    if (datan == 0) {
+        document.getElementById('labnasc').style.color = "#FF1133";
+        verif = "1";
+    } else {
+>>>>>>> Stashed changes
         document.getElementById('labnasc').style.color = "#FFFFFF";
     }
 
     var tele = document.getElementById('telemovel').value.length
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     if(tele == 0){
         document.getElementById('labtel').style.color = "#FF1133";
@@ -143,10 +186,17 @@ function verificar() {
         contador = "1";
     } else {
 >>>>>>> Stashed changes
+=======
+    if (tele == 0) {
+        document.getElementById('labtel').style.color = "#FF1133";
+        verif = "1";
+    } else {
+>>>>>>> Stashed changes
         document.getElementById('labtel').style.color = "#FFFFFF";
     }
 
     var mail = document.getElementById('email').value.length
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     if(mail == 0){
         document.getElementById('labmail').style.color = "#FF1133";
@@ -162,10 +212,16 @@ function verificar() {
     if (mail == 0) {
         document.getElementById('labmail').style.color = "#FF1133";
         contador = "1";
+=======
+    if (mail == 0) {
+        document.getElementById('labmail').style.color = "#FF1133";
+        verif = "1";
+>>>>>>> Stashed changes
     } else {
         document.getElementById('labmail').style.color = "#FFFFFF";
     }
 
+<<<<<<< Updated upstream
     var fotoo = document.getElementById('foto').value.length
     if (mail == 0) {
         document.getElementById('labfoto').style.color = "#FF1133";
@@ -232,6 +288,14 @@ function verificar() {
     });
 
 =======
+=======
+    if (verif == 1) {
+        $('.DadosIncomp').show();
+        return false;
+    }
+
+    var telem1 = document.getElementById('telemovel').value.length
+>>>>>>> Stashed changes
     if (telem1 != 9) {
         document.getElementById('labtel').style.color = "#FF1133";
         $('.telErrado').show();
@@ -245,6 +309,7 @@ function verificar() {
         return false;
     }
     document.getElementById('labtel').style.color = "#FFFFFF";
+<<<<<<< Updated upstream
 
     $('.pop').show();
     
@@ -269,6 +334,12 @@ function verificar() {
 //    $('.pop').hide();
 //    $('#formulario').show();
 //}
+=======
+    
+    return true;
+
+}
+>>>>>>> Stashed changes
 
 function voltt() {
     $('.telErrado').hide();
@@ -278,6 +349,9 @@ function volttt() {
     $('.DadosIncomp').hide();
     $('#formulario').show();
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 app.initialize();

@@ -6,10 +6,17 @@
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/style.css">
+<<<<<<< Updated upstream
+=======
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+>>>>>>> Stashed changes
     <title>Adicionar Utente</title>
 </head>
 
 <body>
+<<<<<<< Updated upstream
     <div id="header">
         <h1>Apoio ao Domicilio</h1>
     </div>
@@ -248,10 +255,125 @@
 </html>
 =======
     </div>
+=======
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color:white">
+                <img src="\img\logo.jpg" alt="" width="40" height="30" class="d-inline-block align-text-top">
+                MediCare - Adicionar Utente
+            </a>
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                    <a class="navbar-brand" href="/listaUtentes.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-arrow-left-circle" viewBox="0 0 16 16" style="color:white">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <form id="formulario" method="post" enctype="multipart/form-data">
+        
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome"
+                style=" border: 2px solid #ECECECFF;">
+            <label for="nome">Nome</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"
+                placeholder="Data Nascimento" style="border: 2px solid #ECECECFF;" value="2022-01-01">
+            <label for="dataNascimento">Data Nascimento</label>
+        </div>
+
+        <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example"
+            style="border: 2px solid #ECECECFF;">
+            <option selected>Situação do utente</option>
+            <option value="1">Ativo</option>
+            <option value="2">Inativo</option>
+        </select>
+
+        <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="dAlteraSit" name="dAlteraSit"
+                placeholder="Data alteração situação" style="border: 2px solid #ECECECFF;" value="2022-01-01">
+            <label for="dAlteraSit">Data alteração situação</label>
+        </div>
+
+        <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil"
+            aria-label=".form-select-sm example" style="border: 2px solid #ECECECFF;">
+            <option selected>Tipo de utilizador</option>
+            <option value="1">Solteiro(a)</option>
+            <option value="2">Casado(a)</option>
+            <option value="3">Divorciado(a)</option>
+            <option value="4">União de Facto</option>
+            <option value="5">Viúvo(a)</option>
+        </select>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" placeholder="Nacionalidade"
+                style=" border: 2px solid #ECECECFF;">
+            <label for="nacionalidade">Nacionalidade</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="morada" name="morada" placeholder="Morada"
+                style=" border: 2px solid #ECECECFF;">
+            <label for="morada">Morada</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="Código Postal"
+                style=" border: 2px solid #ECECECFF;">
+            <label for="codigoPostal">Código Postal</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="contacto" name="contacto" placeholder="contacto"
+                style=" border: 2px solid #ECECECFF;">
+            <label for="contacto">Contacto</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="contacEmergencia" name="contacEmergencia"
+                placeholder="Contacto de emergência" style=" border: 2px solid #ECECECFF;">
+            <label for="contacEmergencia">Contacto de emergência</label>
+        </div>
+
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="foto" name="image">
+            <label class="custom-file-label" for="customFile">Escolher foto</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="textarea " class="form-control" id="notas" name="notas" placeholder="Notas"
+                style=" border: 2px solid #ECECECFF;">
+            <label for="notas">Notas</label>
+        </div>
+
+        <div class="col-12">
+            <button id="adicionar" type="submit" class="btn btn-primary"
+                onclick="window.location.href='listaUtentes.html'">Adicionar</button>
+        </div>
+
+    </form>
+>>>>>>> Stashed changes
 
     <script src="js/jquery.js"></script>
     <script src="cordova.js"></script>
     <script src="js/criaUtente.js"></script>
+<<<<<<< Updated upstream
+</body>
+
+</html>
+>>>>>>> Stashed changes
+=======
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
