@@ -4,7 +4,7 @@ var app = {
     },
 
 onDeviceReady: function(){
-    $("#formulario").submit(function (event){
+    $("#criaForm").submit(function (event){
        event.preventDefault();
        var formData = new FormData(this);
        $.ajax({
@@ -15,7 +15,8 @@ onDeviceReady: function(){
            processData: false, 
            contentType: false, 
            sucess: function( data ){
-               alert(data);
+            //    alert(data);
+               alert('O utente foi adicionado ao sistema com sucesso.');
            }
        });
     });

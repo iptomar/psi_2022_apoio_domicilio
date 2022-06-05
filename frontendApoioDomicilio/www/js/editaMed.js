@@ -29,12 +29,12 @@ $("#editForm").ready(function (){
             type: 'PUT',
              data: formData,
             success: function(result) {
-              alert('Load was performed.');
+              alert('Os dados do medicamento foram atualizados.');
             }
           });
     });
 
-    function remover(idMed){
+    function remover(){
       $.ajax({
           url: 'http://localhost:8080/api/medicamentos/'+idMed,
           type: 'DELETE',
@@ -42,5 +42,6 @@ $("#editForm").ready(function (){
             //play with data
           }
         });
+        window.location = "listaMed.html";
   }
   

@@ -4,7 +4,7 @@ var app = {
     },
 
 onDeviceReady: function(){
-    $("#formulario").submit(function (event){
+    $("#criaForm").submit(function (event){
        event.preventDefault();
        var formData = new FormData(this);
        $.ajax({

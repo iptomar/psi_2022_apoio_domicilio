@@ -28,57 +28,68 @@
             </div>
 
           </nav>
+          <div id="detFoto">
+          </div>
+          
 
           <form id="editForm" class="row g-3" method="put">
-            <label for="nome">Nome</label>
+            <div class="custom-file mt-3 mb-3">
+                <label for="costumFile">Foto</label>
+                <input type="file" class="custom-file-input" id="costumFile" name="image" >             
+            </div> 
             <div class="mb-3">
+                <label for="nome">Nome</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" >
             </div>         
-            <label>Data de Nascimento: </label>
             <div class="mb-3">
+                <label for="dataNascimento">Data de Nascimento: </label>
                 <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="dataNascimento" value="2022-01-01">
             </div>    
-            <label>Situação do utente: </label>
+            
             <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example">
-                <option selected>Tipo de utilizador</option>
+                <option selected>Situação utente</option>
                 <option value="1">Ativo</option>
                 <option value="2">Inativo</option>
               </select>   
-            <label>Data de alteração Situação: </label>
             <div class="mb-3">
+                <label for="dAlteraSit">Alteração Situação: </label>
                  <input type="date"class="form-control" name="dAlteraSit" id="dAlteraSit" placeholder="dAlteraSit"  >
             </div>
-            <label>Estado Civil: </label>
             <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example">
-                <option selected>Tipo de utilizador</option>
+                <option selected>Estado Civil</option>
                 <option value="1">Solteiro(a)</option>
                 <option value="2">Casado(a)</option>
                 <option value="3">Divorciado(a)</option>
                 <option value="4">União de Facto</option>
                 <option value="5">Viúvo(a)</option>
               </select>  
-            <label>Nacionalidade: </label>
+            
             <div class="mb-3">
+                <label for="nacionalidade">Nacionalidade: </label>
                 <input type="text" class="form-control"  name="nacionalidade" id="nacionalidade" placeholder="nacionalidade">
             </div>
-            <label>Morada: </label>
+            
             <div class=" mb-3">
+                <label for="morada">Morada: </label>
                 <input type="text" class="form-control" name="morada" id="morada" placeholder="morada">
             </div>
-            <label>Código postal: </label>
+            
             <div class="mb-3">
-            <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" placeholder="codigoPostal">
+                <label for="codigoPostal">Código postal: </label>
+                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" placeholder="codigoPostal">
             </div>
-            <label>Contacto: </label>
+            
             <div class="mb-3">
+                <label for="contacto">Contacto: </label>
                 <input type="text" class="form-control" name="contacto" id="contacto" placeholder="contacto">
             </div>
-            <label>Contacto Emergência: </label>
+            
             <div class="mb-3">
+                <label for="contacEmergencia">Contacto Emergência: </label>
                 <input type="text" class="form-control" name="contacEmergencia" id="contacEmergencia" placeholder="contacEmergencia">
             </div>
-            <label>Notas: </label>
             <div class="mb-3">
+                <label for="notas">Notas: </label>
                 <input type="textarea" class="form-control"  name="notas" id="notas" placeholder="notas">
             </div>
             <div class="col-12">
