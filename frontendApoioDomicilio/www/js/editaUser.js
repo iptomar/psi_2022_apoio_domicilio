@@ -9,7 +9,9 @@ console.log(idUser)
 
 $("#editForm").ready(function (){
      $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
-        
+      let fotoAux = data.foto.substring(7)
+      $("#detFoto").append('<img id="foto" class="detFoto" src="http://localhost:8080/api/files/'+ fotoAux + '" alt="something" />')
+      foto = data.foto
          $("#nome").val(data.nome) 
          $("#username").val(data.username) 
          $("#tipoUtilizador").val(data.tipoUtilizador) 
@@ -30,7 +32,7 @@ $("#editForm").ready(function (){
             type: 'PUT',
             data: formData,
             success: function(result) {
-              alert('Load was performed.');
+              alert('Os dados do utilizador foram atualizados.');
             }
           });
     });

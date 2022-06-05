@@ -44,20 +44,20 @@
         </nav>
 
         <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Pretende apagar o utente?</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pretende apagar o utente?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                <button type="button" class="btn btn-primary" onclick="remover()">Sim</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-          <button type="button" class="btn btn-primary" onclick="remover()">Sim</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
         <div id="detFoto">
             
@@ -81,9 +81,8 @@
             <div class="mb-3">
                 <input type="date" class="form-control" id="dAlteraSit" name="dAlteraSit" value="2022-01-01" disabled readonly>
             </div>     
-            <label>Estado Civil: </label>
             <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example" disabled readonly>
-                <option selected>Tipo de utilizador</option>
+                <option selected>Estado Civil</option>
                 <option value="1">Solteiro(a)</option>
                 <option value="2">Casado(a)</option>
                 <option value="3">Divorciado(a)</option>
