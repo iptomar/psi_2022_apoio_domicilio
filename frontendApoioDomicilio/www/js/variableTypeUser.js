@@ -1,0 +1,1 @@
+window.typeUser = 0

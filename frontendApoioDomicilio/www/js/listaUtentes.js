@@ -1,3 +1,24 @@
+let tipoUtilizador = localStorage.getItem("typeUser")
+    
+if ( tipoUtilizador != 1 && tipoUtilizador != 2){
+      window.location = "/permissionDenied.html"
+}
+
+if ( tipoUtilizador != 1){
+    document.getElementById("listaUserBtn").style.display = "none";
+    document.getElementById("listaMedsBtn").style.display = "none";
+}
+if (localStorage.getItem("typeUser") == 1){
+    document.getElementById("listaUserBtn").style.display = "block";
+    document.getElementById("listaMedsBtn").style.display = "block";
+}
+if (localStorage.getItem("typeUser") != 2){
+  document.getElementById("criaUtenteBtn").style.display = "none";
+}
+if (localStorage.getItem("typeUser") == 2){
+  document.getElementById("criaUtenteBtn").style.display = "block";
+}
+
 
     $("#utentesTable").ready(function (data){
 

@@ -1,4 +1,9 @@
-
+let tipoUtilizador = localStorage.getItem("typeUser")
+    
+if ( tipoUtilizador != 1){
+      window.location = "/permissionDenied.html"
+}
+    
     $("#usersTable").ready(function (data){
 
          $.get( "http://localhost:8080/api/users/allUsers", function( data ) {
@@ -33,6 +38,9 @@
           }); 
        
     })
+
+    console.log("Entrei na lista user")
+    console.log("tipoUtilizador = " + tipoUtilizador)
 
 
     

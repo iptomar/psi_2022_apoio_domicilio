@@ -1,3 +1,5 @@
+localStorage.setItem("typeUser", 0);
+
 function login(username,password) {
     //alert("username: " + user + "password: " + password);
 
@@ -5,12 +7,20 @@ function login(username,password) {
 
         if(username == data.username && password == data.password){
             if( data.tipoUtilizador == 1){
-                window.open('listaUsers.html')
+                localStorage.setItem("typeUser", 1);
+                console.log("TypeuserLogin = " + localStorage.getItem("typeUser"))
+                window.open('homeAutenticado.html')
+
+
             }
             if( data.tipoUtilizador == 2) {
-                window.open('listaUtentes.html')
+                localStorage.setItem("typeUser", 2);
+                console.log("TypeuserLogin = " + localStorage.getItem("typeUser"))
+                window.open('homeAutenticado.html')
+
             }
             if( data.tipoUtilizador != 1 && data.tipoUtilizador != 2) {
+                localStorage.setItem("typeUser", 0);
                 alert("Tipo de utilizador não reconhecido");
             }
 
