@@ -1,6 +1,6 @@
 let tipoUtilizador = localStorage.getItem("typeUser")
     
-if ( tipoUtilizador != 1 && tipoUtilizador != 2){
+if ( tipoUtilizador != 1 && tipoUtilizador != 2 && tipoUtilizador != 3){
       window.location = "/permissionDenied.html"
 }
 
@@ -8,16 +8,18 @@ if ( tipoUtilizador != 1){
     document.getElementById("listaUserBtn").style.display = "none";
     document.getElementById("listaMedsBtn").style.display = "none";
 }
-if (localStorage.getItem("typeUser") == 1){
+if (localStorage.getItem("typeUser") == 1 && localStorage.getItem("typeUser") == 3){
     document.getElementById("listaUserBtn").style.display = "block";
     document.getElementById("listaMedsBtn").style.display = "block";
 }
 if (localStorage.getItem("typeUser") != 2){
-  document.getElementById("criaUtenteBtn").style.display = "none";
-}
-if (localStorage.getItem("typeUser") == 2){
   document.getElementById("criaUtenteBtn").style.display = "block";
 }
+if (localStorage.getItem("typeUser") == 2){
+  document.getElementById("criaUtenteBtn").style.display = "none";
+}
+
+
 
 
     $("#utentesTable").ready(function (data){

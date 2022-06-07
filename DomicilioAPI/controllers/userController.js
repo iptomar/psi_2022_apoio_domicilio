@@ -1,5 +1,8 @@
 const db = require('../models')
 
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+
 // image Upload
 const multer = require('multer')
 const path = require('path')
@@ -14,6 +17,8 @@ const User = db.users
 // 1. create user
 
 const addUser = async (req, res) => {
+   const password = req.body.password;    
+    const encryptedPassword = await bcrypt.hash(password, saltRounds)
 
     let info = {
         nome: req.body.nome,
