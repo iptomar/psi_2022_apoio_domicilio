@@ -36,6 +36,7 @@ db.sequelize = sequelize
 db.users = require('./userModel.js')(sequelize, DataTypes)
 db.utentes = require('./utenteModel.js')(sequelize, DataTypes)
 db.medicamentos = require('./medModel.js')(sequelize, DataTypes)
+db.visitas = require('./visitaModel.js')(sequelize, DataTypes)
 
 db.sequelize.sync({ force: false })
 .then(() => {

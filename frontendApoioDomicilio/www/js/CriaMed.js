@@ -1,3 +1,9 @@
+let tipoUtilizador = localStorage.getItem("typeUser")
+    
+if ( tipoUtilizador != 1  && tipoUtilizador != 3){
+      window.location = "/permissionDenied.html"
+}
+
 var app = {
     initialize: function(){
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);

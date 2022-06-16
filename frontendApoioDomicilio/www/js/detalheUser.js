@@ -1,5 +1,10 @@
 let foto;
 
+let tipoUtilizador = localStorage.getItem("typeUser")
+    
+if ( tipoUtilizador != 1){
+      window.location = "/permissionDenied.html"
+}
 
 $("#detForm").ready(function (){
     $.get("http://localhost:8080/api/users/"+idUser, function(data, status){

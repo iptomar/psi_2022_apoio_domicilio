@@ -1,3 +1,8 @@
+let tipoUtilizador = localStorage.getItem("typeUser")
+    
+if ( tipoUtilizador != 1 && tipoUtilizador != 3){
+      window.location = "/permissionDenied.html"
+}
 
 $("#editForm").ready(function (){
      $.get("http://localhost:8080/api/utentes/"+idUtente, function(data, status){

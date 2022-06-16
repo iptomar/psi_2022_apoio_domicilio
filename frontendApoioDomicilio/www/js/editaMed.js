@@ -1,3 +1,9 @@
+let tipoUtilizador = localStorage.getItem("typeUser")
+    
+if ( tipoUtilizador != 1 && tipoUtilizador != 3){
+      window.location = "/permissionDenied.html"
+}
+
 var queryString = location.search.substring(1);
  
 var a = queryString.split("=");
