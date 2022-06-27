@@ -33,22 +33,13 @@
           </div>
         </div>
       </nav>
-   
-        <form id="formLogin">
-             
-              <label>Utilizador</label>
-              <input id="username" name="username" type="text" />
-              <br><br>
-         
-              <label>Password</label>
-              <input id="password" name="password" type="password" />
-              <br><br><br>
-          
-              <button class="botaologin" type="button" onclick="login(document.getElementById('username')
-                            .value,document.getElementById('password').value)">Entrar</button>
+          <form id="formLogin" >      
+              <input type="text" id="username" name="username">
 
-              <button type="button" onclick="window.location.href='listaUsers.html'">Entrar</button><br><br><br>
-              
+              <input type="text" id="password" name="password">
+                <button id="botaoLogin" type="submit">Login</button>
+
+
         </form>  
         <script src="js/variableTypeUser.js"></script>
         <script src="js/jquery.js"></script>

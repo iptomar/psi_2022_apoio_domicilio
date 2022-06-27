@@ -7,6 +7,12 @@ const path = require('path')
 // create main Model
 const User = db.users
 
+const bcrypt = require('bcrypt');
+async function hashIt(password){
+  const salt = await bcrypt.genSalt(6);
+  const hashed = await bcrypt.hash(password, salt);
+  return hashed
+}
 
 
 // main work
@@ -14,11 +20,11 @@ const User = db.users
 // 1. create user
 
 const addUser = async (req, res) => {
-
+    let passwordEncrypted = await hashIt(req.body.password);
     let info = {
         nome: req.body.nome,
         username: req.body.username,
-        password: req.body.password,
+        password: passwordEncrypted,
         tipoUtilizador: req.body.tipoUtilizador,
         dataNascimento: req.body.dataNascimento,
         foto: req.file.path,
@@ -111,6 +117,28 @@ const upload = multer({
 }).single('image')
 
 
+// 1. create user
+
+const loginUser = async (req, res) => {
+    console.log("entrei")
+    let passwordEncrypted = await hashIt(req.body.password);
+    let info = {
+        username: req.body.username,
+        password: passwordEncrypted
+    }
+
+    try{
+        const user =  await User.findOne({ where: { username: req.body.username }})
+        if(user==null) 
+         return res.status(400).json({err : "User with  email doesnot exists.Please signup"});
+  }
+   catch(error){
+         return res.status(500).json({err : 
+                             error.message});
+       }
+}
+
+
 module.exports = {
     getAllUsers,
     addUser,
@@ -118,5 +146,6 @@ module.exports = {
     getOneByName,
     updateUser,
     deleteUser,
-    upload
+    upload, 
+    loginUser
 }

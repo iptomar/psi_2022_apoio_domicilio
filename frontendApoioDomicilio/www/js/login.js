@@ -1,32 +1,35 @@
 localStorage.setItem("typeUser", 0);
 
-function login(username,password) {
-    //alert("username: " + user + "password: " + password);
+var app = {
+    initialize: function(){
+    document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
 
-    $.get("http://localhost:8080/api/users/name/"+username, function(data){
+onDeviceReady: function(){
+    $("#formLogin").submit(function (event){
+       event.preventDefault();
+       $.ajax({
+        type: "POST",
+        contentType: 'application/json',
+        url: "http://localhost:8080/api/users/loginUser",
+        data: {
+            username: $("#username").val(),
+            password: $("#password").val()
 
-        if(username == data.username && password == data.password){
-            if( data.tipoUtilizador == 1){
-                localStorage.setItem("typeUser", 1);
-                console.log("TypeuserLogin = " + localStorage.getItem("typeUser"))
-                window.open('homeAutenticado.html')
+        } ,
+         sucess: function( data ){
+             localStorage.setItem("typeUser", 1);
+             console.log("TypeuserLogin = " + localStorage.getItem("typeUser"))
+             window.open('homeAutenticado.html')
+             alert(data);
+             alert(data);
+         },
+         error: function( data ){
+          alert('error');
+      }
 
-
-            }
-            if( data.tipoUtilizador == 2) {
-                localStorage.setItem("typeUser", 2);
-                console.log("TypeuserLogin = " + localStorage.getItem("typeUser"))
-                window.open('homeAutenticado.html')
-
-            }
-            if( data.tipoUtilizador != 1 && data.tipoUtilizador != 2) {
-                localStorage.setItem("typeUser", 0);
-                alert("Tipo de utilizador não reconhecido");
-            }
-
-        }
-        else{
-            alert("Palavra passe ou utilizador está incorreta");
-        }
     });
-}
+    });
+    }
+};
+app.initialize();
