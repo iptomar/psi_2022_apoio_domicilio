@@ -6,7 +6,7 @@ Na vertente frontend foi utilizada a framework Cordova, baseada em javascript, h
 Para melhoria do visual da aplicação são utilizados componentes livres da biblioteca de bootstrap.
 Foi utilizado um servidor local, criado com recurso ao XAMPP.
 
-Foi aplicado neste projeto os conceitos lecionados na UC, referentes ao modelo Agile, tendo o trabalho decorrido ao longo de duas sprints, no entanto não nos foi possível completar todos os objetivos da segunda sprint.
+Foram aplicados neste projeto os conceitos lecionados na UC, referentes ao modelo Agile, tendo o trabalho decorrido ao longo de duas sprints, no entanto não nos foi possível completar todos os objetivos da segunda sprint.
 
 
 Endpoints
