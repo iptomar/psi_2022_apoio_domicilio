@@ -56,15 +56,21 @@ DELETE:
 http://localhost:8080/api/utentes/:id - Elimina utente da base de dados;
 
 Página principal
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176009830-7b70b34e-465c-49f6-b82c-7aeba1033093.png)
 
 
 
 Login
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176009951-a6f82f5f-c771-484c-9f3b-ba3209fea9fd.png)
 
 
 Lista de utilizadores
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176010039-afd7d947-b5d9-4080-ae90-5dcf5bfd8282.png)
 
 Lista de utentes
