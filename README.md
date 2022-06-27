@@ -74,19 +74,29 @@ Lista de utilizadores
 ![image](https://user-images.githubusercontent.com/48334715/176010039-afd7d947-b5d9-4080-ae90-5dcf5bfd8282.png)
 
 Lista de utentes
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176010106-7fadf2ea-802d-4aa5-bcea-2e8593a22146.png)
 
 Lista de medicamentos
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176010167-39e82cde-bcc5-4f1f-a6bb-b56f8c5816f0.png)
 
 
 Criar utilizadores
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176010250-b680e4f4-ff8a-45fc-80da-d5b395aa2772.png)
 
 Criar utentes
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176010523-936ad328-a2e1-4041-ad9e-92584565f6d5.png)
 
 Criar medicamentos
+
+
 ![image](https://user-images.githubusercontent.com/48334715/176010432-9a522361-027a-4f5b-8adf-40ad5a206201.png)
 
 
