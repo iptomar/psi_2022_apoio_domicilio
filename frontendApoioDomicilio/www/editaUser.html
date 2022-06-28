@@ -1,84 +1,143 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-        <title>Editar Utilizador</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                    <img src="\img\logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top" style="color:white">
-                    MediCare
-              </a>
-               <div class="d-flex flex-row bd-highlight mb-3">
+
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <title>Editar Utilizador</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="\img\logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"
+                    style="color:white">
+                MediCare
+            </a>
+            <div class="d-flex flex-row bd-highlight mb-3">
                 <div class="p-2 bd-highlight">
-                   <a class="navbar-brand" href="/listaUsers.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-circle-fill d-inline-block align-text-top" viewBox="0 0 16 16" style="color:white">
-                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-                </svg>
-                </a>
-               </div> 
-             </div>
+                    <a class="navbar-brand" href="/listaUsers.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-arrow-left-circle-fill d-inline-block align-text-top" viewBox="0 0 16 16"
+                            style="color:white">
+                            <path
+                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-
-          </nav>
-
-        <div id="detFoto">
-
         </div>
-        
 
-        <form id="editForm" class="row g-3" method="put">
-            <div class="custom-file mt-3 mb-3">
-                <label for="costumFile">Foto</label>
-                <input type="file" class="custom-file-input" id="costumFile" name="image" >             
-            </div> 
-            <div class=" mb-3">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" >               
-            </div>         
-            <div class=" mb-3">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username">               
-            </div>   
-            <div class=" mb-3">
-                <label for="password">Password</label>
-                <input type="text" class="form-control" id="password" name="password" placeholder="Password">                
-            </div>
-            <label for="tipoUtilizador">Tipo de utilizador</label>
-            <select class="form-select form-select-sm" name="tipoUtilizador" id="tipoUtilizador" aria-label=".form-select-sm example">
-                <option selected>Tipo de utilizador</option>
-                <option value="1">Gestor</option>
-                <option value="2">Administrativo</option>
-                <option value="3">Enfermeiro</option>
-              </select>
-             <div class=" mb-3">
-                <label for="telemovel">Data Nascimento</label>
-                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="dataNascimento" value="2022-01-01">              
-            </div>  
-            <div class=" mb-3">
-                <label for="telemovel">Telemóvel</label>
-                <input type="text" class="form-control" id="telemovel" name="telemovel" placeholder="telemovel">
-            </div>   
-            <div class=" mb-3">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your personal data with anyone else.</div>
-            </div>
-            <div class="col-12">
-            <button type="submit" class="btn btn-info" onclick="window.location.href='listaUsers.html'">Atualizar</button> 
-            </div>
-        </form>
-        <script src="js/variableTypeUser.js"></script>
-        <script src="js/jquery.js"></script>
-        <script src="cordova.js"></script>
-        <script src="js/editaUser.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+    </nav>
+
+    <div id="detFoto">
+
+    </div>
+
+
+    <form id="editForm" class="row g-3" onsubmit="return verificar()" method="put">
+
+        <div class="custom-file mt-3 mb-3">
+            <label id="labfoto" for="costumFile">Foto</label>
+            <input type="file" class="custom-file-input" id="costumFile" name="image">
+        </div>
+
+        <div class=" mb-3">
+            <label id="labnome" for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome"
+                onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')">
+        </div>
+
+        <div class=" mb-3">
+            <label id="labUsern" for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')">
+        </div>
+
+        <div class=" mb-3">
+            <label id="labpass" for="password">Password</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="Password"
+                onkeyup="this.value = this.value.replace(/[^a-Z]/,'')">
+        </div>
+
+        <label id="labTipouser" for="tipoUtilizador">Tipo de utilizador</label>
+        <select class="form-select form-select-sm" name="tipoUtilizador" id="tipoUtilizador"
+            aria-label=".form-select-sm example">
+            <option selected>Tipo de utilizador</option>
+            <option value="1">Gestor</option>
+            <option value="2">Administrativo</option>
+            <option value="3">Enfermeiro</option>
+        </select>
+
+        <div class=" mb-3">
+            <label id="labdatNasc" for="dataNascimento">Data Nascimento</label>
+            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"
+                placeholder="dataNascimento" value="2000-01-01" max="2004-12-31">
+        </div>
+
+        <div class=" mb-3">
+            <label id="labtel" for="telemovel">Telemóvel</label>
+            <input type="text" class="form-control" id="telemovel" name="telemovel" placeholder="telemovel"
+                onkeyup="this.value = this.value.replace(/[^0-9]/, '')" maxlength="9">
+        </div>
+
+        <div class=" mb-3">
+            <label id="labmail" for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your personal data with anyone else.</div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-info">Atualizar</button>
+        </div>
+
+    </form>
+
+    <div class="pop">
+        <span class="helper"></span>
+        <div>
+            <p>Utilizador alterado com sucesso</p>
+            <button
+                style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
+                onclick="window.location.href='listaUsers.html'">Continuar</button>
+        </div>
+    </div>
+
+    <!-- popup para numero de telemovel errado -->
+    <div class="telErrado">
+        <span class="helper"></span>
+        <div>
+            <p>Introduziu um número de telemovel errado</p>
+            <button id="voltt" type="button"
+                style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
+                onclick="voltar()">Voltar</button>
+        </div>
+    </div>
+
+    <div class="DadosIncomp">
+        <span class="helper"></span>
+        <div>
+            <p>Por favor introduza toda a informação</p>
+            <button id="volta" type="button"
+                style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
+                onclick="voltar2()">Voltar</button>
+        </div>
+    </div>
+
+    <script src="js/variableTypeUser.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/editaUser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

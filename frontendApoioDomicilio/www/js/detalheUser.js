@@ -4,6 +4,7 @@ let foto;
 $("#detForm").ready(function (){
     $.get("http://localhost:8080/api/users/"+idUser, function(data, status){
         let fotoAux = data.foto.substring(7)
+        //let fotoAux = data.foto.substring(7)
         $("#detFoto").append('<img id="foto" class="detFotoUser" src="http://localhost:8080/api/files/'+ fotoAux + '" alt="something" />')
         foto = data.foto
         $("#nome").val(data.nome) 

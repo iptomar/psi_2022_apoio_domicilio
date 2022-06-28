@@ -1,90 +1,136 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-        <title>Editar Medicamento</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#" style="color:white">
-                    <img src="\img\logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                    MediCare
-              </a>
-              <div class="d-flex flex-row bd-highlight mb-3">
-                <div class="p-2 bd-highlight">
-                  <a class="navbar-brand" href="#exampleModal" data-bs-toggle="modal" data-target="#exampleModalLabel">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16" style="color:white">
-                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                      </svg>
-                    </a>
-                </div>
-               <div class="d-flex flex-row bd-highlight mb-3">
-                <div class="p-2 bd-highlight">
-                   <a class="navbar-brand" href="/listaMed.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-circle-fill d-inline-block align-text-top" viewBox="0 0 16 16" style="color:white">
-                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-                </svg>
-                </a>
-               </div> 
-             </div>
-            </div>
-          </nav>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Pretende apagar o medicamento?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-                    <button type="button" class="btn btn-primary" onclick="remover()">Sim</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-          
-        <form id="editForm" class="row g-3" method="put">
-          <label>Nome: </label>
-          <div class="mb-3">
-            <input type="text" class="form-control" name="nome" id="nome">
-          </div>  
-          <label>Farmacêutica: </label>
-          <div class="mb-3">    
-            <input type="text" class="form-control" name="farmaceutica" id="farmaceutica">
-          </div>  
-          <label>Principio activo: </label>
-          <div class="mb-3">
-            <input type="text" class="form-control" name="principio" id="principio">
-          </div>  
-          <label>Dosagem: </label>
-          <div class="mb-3">  
-            <input type="text" class="form-control" name="dosagem" id="dosagem">
+<head>
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <title>Editar Medicamento</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color:white">
+        <img src="\img\logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        MediCare
+      </a>
+      <div class="d-flex flex-row bd-highlight mb-3">
+        <div class="p-2 bd-highlight">
+          <a class="navbar-brand" href="#exampleModal" data-bs-toggle="modal" data-target="#exampleModalLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash"
+              viewBox="0 0 16 16" style="color:white">
+              <path
+                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+              <path fill-rule="evenodd"
+                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+            </svg>
+          </a>
+        </div>
+        <div class="d-flex flex-row bd-highlight mb-3">
+          <div class="p-2 bd-highlight">
+            <a class="navbar-brand" href="/listaMed.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                class="bi bi-arrow-left-circle-fill d-inline-block align-text-top" viewBox="0 0 16 16"
+                style="color:white">
+                <path
+                  d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+              </svg>
+            </a>
           </div>
-          <label>Formato: </label>
-          <div class="mb-3">           
-            <input type="text" class="form-control" name="formato" id="formato">
-          </div>
-            <!-- <label>Stock: </label>
+        </div>
+      </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pretende apagar o medicamento?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+          <button type="button" class="btn btn-primary" onclick="remover()">Sim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="editForm" class="row g-3" onsubmit="return verificar()" method="put">
+
+    <label id="labnome">Nome: </label>
+    <div class="mb-3">
+      <input type="text" class="form-control" name="nome" id="nome"
+        onkeyup="this.value = this.value.replace(/[^a-Z ]/, '')">
+    </div>
+
+    <label id="labfarma">Farmacêutica: </label>
+    <div class="mb-3">
+      <input type="text" class="form-control" name="farmaceutica" id="farmaceutica"
+        onkeyup="this.value = this.value.replace(/[^a-Z ]/, '')">
+    </div>
+
+    <label id="labprinc">Principio activo: </label>
+    <div class="mb-3">
+      <input type="text" class="form-control" name="principio" id="principio"
+        onkeyup="this.value = this.value.replace(/[^a-Z ]/, '')">
+    </div>
+
+    <label id="labdosa">Dosagem: </label>
+    <div class="mb-3">
+      <input type="text" class="form-control" name="dosagem" id="dosagem"
+        onkeyup="this.value = this.value.replace(/[^a-Z ]/, '')">
+    </div>
+
+    <label id="labforma">Formato: </label>
+    <div class="mb-3">
+      <input type="text" class="form-control" name="formato" id="formato"
+        onkeyup="this.value = this.value.replace(/[^a-Z ]/, '')">
+    </div>
+
+    <!-- <label>Stock: </label>
             <input type="text" name="stock" id="stock"><br>
             <br> -->
-            <div class="col-12">
-              <button type="submit" class="btn btn-info" onclick="window.location.href='listaMed.html'">Atualizar</button> 
-              </div>
-        </form>
-        <script src="js/variableTypeUser.js"></script>
-        <script src="js/jquery.js"></script>
-        <script src="cordova.js"></script>
-        <script src="js/editaMed.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-info">Atualizar</button>
+    </div>
+
+  </form>
+
+  <div class="pop">
+    <span class="helper"></span>
+    <div>
+      <p>Medicamento atualizado com sucesso</p>
+      <button
+        style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
+        onclick="window.location.href='listaMed.html'">Continuar</button>
+    </div>
+  </div>
+
+  <div class="DadosIncomp">
+    <span class="helper"></span>
+    <div>
+      <p>Por favor introduza toda a informação</p>
+      <button id="volta" type="button"
+        style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
+        onclick="volttt()">Voltar</button>
+    </div>
+  </div>
+
+  <script src="js/variableTypeUser.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="cordova.js"></script>
+  <script src="js/editaMed.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
