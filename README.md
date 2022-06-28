@@ -1,6 +1,6 @@
 # psi_2022_apoio_domicilio
 
--Este projeto fullstack foi desenvolvido no âmbito da unidade curricular de 3º ano, Projeto de Sistemas de Informação, do curso de Enegenharia Informática do instituto Politécnico de Tomar - Portugal.
+Este projeto fullstack foi desenvolvido no âmbito da unidade curricular de 3º ano, Projeto de Sistemas de Informação, do curso de Enegenharia Informática do instituto Politécnico de Tomar - Portugal.
 Na vertente backend foi utilizada a framework ExpressJS baseada em NodeJS. Para a manipulação da base de dados em NodeJs foi utilizado o módulo Sequelize, que é baseado em TypeScript.
 Na vertente frontend foi utilizada a framework Cordova, baseada em javascript, html e CSS.
 Para melhoria do visual da aplicação são utilizados componentes livres da biblioteca de bootstrap.
