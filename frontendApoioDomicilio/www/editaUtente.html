@@ -1,168 +1,105 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <title>Editar Utente</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color:white">
-                <img src="\img\logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                MediCare
-            </a>
-            <div class="d-flex flex-row bd-highlight mb-3">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <title>Editar Utente</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(75, 146, 252);">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="color:white">
+                    <img src="\img\logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    MediCare
+              </a>
+               <div class="d-flex flex-row bd-highlight mb-3">
                 <div class="p-2 bd-highlight">
-                    <a class="navbar-brand" href="/listaUtentes.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                            class="bi bi-arrow-left-circle-fill d-inline-block align-text-top" viewBox="0 0 16 16"
-                            style="color:white">
-                            <path
-                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-                        </svg>
-                    </a>
-                </div>
+                   <a class="navbar-brand" href="/listaUtentes.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-circle-fill d-inline-block align-text-top" viewBox="0 0 16 16" style="color:white">
+                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+                </a>
+               </div> 
+             </div>
             </div>
-        </div>
 
-    </nav>
-    <div id="detFoto">
-    </div>
+          </nav>
+          <div id="detFoto">
+          </div>
+          
 
-
-    <form id="editForm" class="row g-3" onsubmit="return verificar()" method="put">
-
-        <div class="custom-file mt-3 mb-3">
-            <label id="labfoto" for="costumFile">Foto</label>
-            <input type="file" class="custom-file-input" id="costumFile" name="image">
-        </div>
-
-        <div class="mb-3">
-            <label id="labnome" for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome"
-                onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')" name="nome" placeholder="Nome">
-        </div>
-
-        <div class="mb-3">
-            <label id="labdatNasc" for="dataNascimento">Data de Nascimento: </label>
-            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"
-                placeholder="dataNascimento" max="2004-12-31" value="2022-01-01">
-        </div>
-
-        <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example">
-            <option selected>Situação utente</option>
-            <option value="1">Ativo</option>
-            <option value="2">Inativo</option>
-        </select>
-
-        <div class="mb-3">
-            <label id="labdatalt" for="dAlteraSit">Alteração Situação: </label>
-            <input type="date" class="form-control" name="dAlteraSit" id="dAlteraSit" placeholder="dAlteraSit">
-        </div>
-
-        <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil"
-            aria-label=".form-select-sm example">
-            <option selected>Estado Civil</option>
-            <option value="1">Solteiro(a)</option>
-            <option value="2">Casado(a)</option>
-            <option value="3">Divorciado(a)</option>
-            <option value="4">União de Facto</option>
-            <option value="5">Viúvo(a)</option>
-        </select>
-
-        <div class="mb-3">
-            <label id="labnaci" for="nacionalidade">Nacionalidade: </label>
-            <input type="text" class="form-control" name="nacionalidade" id="nacionalidade"
-                onkeyup="this.value = this.value.replace(/[^a-zA-Z ]/, '')" placeholder="nacionalidade">
-        </div>
-
-        <div class=" mb-3">
-            <label id="labmora" for="morada">Morada: </label>
-            <input type="text" class="form-control" name="morada" id="morada"
-                onkeyup="this.value = this.value.replace(/[^a-zA-Z1-9 ]/, '')" placeholder="morada">
-        </div>
-
-        <div class="mb-3">
-            <label id="labcodp" for="codigoPostal">Código postal: </label>
-            <input type="text" class="form-control" name="codigoPostal" id="codigoPostal"
-                onkeyup="this.value = this.value.replace(/[^0-9-]/, '')" placeholder="codigoPostal">
-        </div>
-
-        <div class="mb-3">
-            <label id="labcont" for="contacto">Contacto: </label>
-            <input type="text" class="form-control" name="contacto" id="contacto" placeholder="contacto">
-        </div>
-
-        <div class="mb-3">
-            <label id="labconte" for="contacEmergencia">Contacto Emergência: </label>
-            <input type="text" class="form-control" name="contacEmergencia" id="contacEmergencia"
-                onkeyup="this.value = this.value.replace(/[^0-9]/, '')" maxlength="9" placeholder="contacEmergencia">
-        </div>
-
-        <div class="mb-3">
-            <label for="notas">Notas: </label>
-            <input type="textarea" class="form-control" name="notas" id="notas" placeholder="notas">
-        </div>
-
-        <div class="col-12">
-            <button type="submit" class="btn btn-info">Atualizar</button>
-        </div>
-    </form>
-
-    <div class="pop">
-        <span class="helper"></span>
-        <div>
-            <p>Utente atualizado com sucesso</p>
-            <button
-                style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
-                onclick="window.location.href='listaUtentes.html'">Continuar</button>
-        </div>
-    </div>
-
-    <!-- popup para numero de telemovel errado -->
-    <div class="telErrado">
-        <span class="helper"></span>
-        <div>
-            <p>Introduziu um número de telemovel errado</p>
-            <button id="voltt" type="button"
-                style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
-                onclick="voltar1()">Voltar</button>
-        </div>
-    </div>
-
-    <div class="DadosIncomp">
-        <span class="helper"></span>
-        <div>
-            <p>Por favor introduza toda a informação</p>
-            <button id="volta" type="button"
-                style="background-color: rgb(75, 146, 252); border-color: rgb(75, 146, 252);  color: white; border-radius: 4px; border:opx; width:100px"
-                onclick="voltar2()">Voltar</button>
-        </div>
-    </div>
-
-    <div class="PostalErrado">
-        <span class="helper"></span>
-        <div>
-            <p>Por favor introduza um código postal correto</p>
-            <button id="voltta" type="button" onclick="voltar3()">Continuar</button>
-        </div>
-    </div>
-
-    <script src="js/variableTypeUser.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="cordova.js"></script>
-    <script src="js/editaUtente.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-</body>
-
+          <form id="editForm" class="row g-3" method="put">
+            <div class="custom-file mt-3 mb-3">
+                <label for="costumFile">Foto</label>
+                <input type="file" class="custom-file-input" id="costumFile" name="image" >             
+            </div> 
+            <div class="mb-3">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" >
+            </div>         
+            <div class="mb-3">
+                <label for="dataNascimento">Data de Nascimento: </label>
+                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="dataNascimento" value="2022-01-01">
+            </div>    
+            
+            <select class="form-select form-select-sm" name="sitUtente" id="sitUtente" aria-label=".form-select-sm example">
+                <option selected>Situação utente</option>
+                <option value="1">Ativo</option>
+                <option value="2">Inativo</option>
+              </select>   
+            <div class="mb-3">
+                <label for="dAlteraSit">Alteração Situação: </label>
+                 <input type="date"class="form-control" name="dAlteraSit" id="dAlteraSit" placeholder="dAlteraSit"  >
+            </div>
+            <select class="form-select form-select-sm" name="estadoCivil" id="estadoCivil" aria-label=".form-select-sm example">
+                <option selected>Estado Civil</option>
+                <option value="1">Solteiro(a)</option>
+                <option value="2">Casado(a)</option>
+                <option value="3">Divorciado(a)</option>
+                <option value="4">União de Facto</option>
+                <option value="5">Viúvo(a)</option>
+              </select>  
+            
+            <div class="mb-3">
+                <label for="nacionalidade">Nacionalidade: </label>
+                <input type="text" class="form-control"  name="nacionalidade" id="nacionalidade" placeholder="nacionalidade">
+            </div>
+            
+            <div class=" mb-3">
+                <label for="morada">Morada: </label>
+                <input type="text" class="form-control" name="morada" id="morada" placeholder="morada">
+            </div>
+            
+            <div class="mb-3">
+                <label for="codigoPostal">Código postal: </label>
+                <input type="text" class="form-control" name="codigoPostal" id="codigoPostal" placeholder="codigoPostal">
+            </div>
+            
+            <div class="mb-3">
+                <label for="contacto">Contacto: </label>
+                <input type="text" class="form-control" name="contacto" id="contacto" placeholder="contacto">
+            </div>
+            
+            <div class="mb-3">
+                <label for="contacEmergencia">Contacto Emergência: </label>
+                <input type="text" class="form-control" name="contacEmergencia" id="contacEmergencia" placeholder="contacEmergencia">
+            </div>
+            <div class="mb-3">
+                <label for="notas">Notas: </label>
+                <input type="textarea" class="form-control"  name="notas" id="notas" placeholder="notas">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-info" onclick="window.location.href='listaUtentes.html'">Atualizar</button> 
+            </div>
+        </form>
+        <script src="js/variableTypeUser.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/editaUtente.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
 </html>
